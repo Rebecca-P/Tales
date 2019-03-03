@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void sendtoMe2 (View view)
+    public void goToMenu (View view)
     {
-//direction activity_new_one
+
         Intent nameIntent = new Intent(this, Menu.class);
         startActivity(nameIntent);
     }
