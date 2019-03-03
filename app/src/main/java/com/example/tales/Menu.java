@@ -2,6 +2,7 @@ package com.example.tales;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 import android.view.View;
@@ -17,6 +18,14 @@ public class Menu extends AppCompatActivity{
         setContentView(R.layout.menu);
 
         RecyclerView rv_menu = (RecyclerView) findViewById(R.id.menu_list);
-        rv_menu.setLayoutManager(this);
+        rv_menu.setLayoutManager(new LinearLayoutManager(this));
+        rv_menu.setAdapter(new MyAdapter());
     }
 }
+//TODO
+/*
+* Remplacer par des boutons
+* et pour chaque boutons
+* leur envoyer la liste
+*
+* */

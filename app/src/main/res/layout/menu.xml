@@ -13,49 +13,34 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="75dp"
+            android:id="@+id/imageView5"
+            android:layout_width="87dp"
             android:layout_height="75dp"
-            android:layout_weight="1"
             app:srcCompat="@drawable/loupe" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="328dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:ems="10"
             android:fontFamily="@font/belgrano"
             android:inputType="textPersonName"
             android:text="RECHERCHE"
             android:textAlignment="center"
-            android:textColor="@color/police"
-            android:textSize="30sp" />
+            android:textColor="@color/police" />
+
     </LinearLayout>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/menuunder" />
-
         <TextView
             android:id="@+id/Title"
             android:layout_width="167dp"
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/belgrano"
             android:text="MENU"
             android:textAlignment="center"
@@ -66,14 +51,33 @@
             app:layout_constraintStart_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menuunder" />
+
     </android.support.constraint.ConstraintLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/menu_list"
         android:layout_width="match_parent"
-        android:layout_height="592dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="vertical">
+        android:clipToPadding="true"
+
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>

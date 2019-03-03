@@ -4,21 +4,12 @@ import android.widget.Button;
 public class Item_Menu {
 
     private String categorie;
-    private String imag;
-    //private Button myButton ;
+    private Integer imag;
 
-    public Item_Menu(String categorie, String imag) {
+    public Item_Menu(String categorie, Integer imag) {
         this.categorie = categorie;
         this.imag = imag;
     }
-
-    /*public Button getMyButton() {
-        return myButton;
-    }
-
-    public void setMyButton(Button myButton) {
-        this.myButton = myButton;
-    }*/
 
     public String getCategorie() {
         return categorie;
@@ -28,11 +19,11 @@ public class Item_Menu {
         this.categorie = categorie;
     }
 
-    public String getImag() {
+    public Integer getImag() {
         return imag;
     }
 
-    public void setImag(String imag) {
+    public void setImag(Integer imag) {
         this.imag = imag;
     }
 }
