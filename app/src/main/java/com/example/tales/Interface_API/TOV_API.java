@@ -8,5 +8,5 @@ import retrofit2.http.GET;
 public interface TOV_API {
 
     @GET("item")
-    Call<ItemResponse> getResultats();
+    Call<ItemResponse> getResultts();
 }

@@ -1,19 +1,21 @@
 package com.example.tales.Response;
 import com.example.tales.Objet.Item_Menu;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
 public class ItemResponse {
-    private Integer count;
+   // private Integer count;
+    @SerializedName("item")
     private ArrayList<Item_Menu> item_element;
 
-    public Integer getCount() {
+    /*public Integer getCount() {
         return count;
     }
 
     public void setCount(Integer count) {
         this.count = count;
-    }
+    }*/
 
     public ArrayList<Item_Menu> getItem_element() {
         return item_element;

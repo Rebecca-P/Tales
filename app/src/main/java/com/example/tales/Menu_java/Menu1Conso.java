@@ -30,7 +30,7 @@ public class Menu1Conso extends AppCompatActivity {
         rv_menu = (RecyclerView) findViewById(R.id.thingslist);
         controller = new MainController(this);
         controller.onCreate();
-
+        controller.item_liste();
 
     }
 

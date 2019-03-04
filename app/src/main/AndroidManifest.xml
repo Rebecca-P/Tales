@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tales">
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@drawable/bravestar"
@@ -23,7 +23,8 @@
         <activity
             android:name=".Menu_java.Menu1Item"
             android:screenOrientation="portrait"/>
-
+        <activity android:name=".Menu_java.Menu1Conso"
+            android:screenOrientation="portrait"/>
 
     </application>
 

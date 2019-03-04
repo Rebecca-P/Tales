@@ -46,7 +46,7 @@ public class MainController {
 
     public void item_liste()
     {
-        Call<ItemResponse> call = tov_api.getResultats();
+        Call<ItemResponse> call = tov_api.getResultts();
         call.enqueue(new Callback<ItemResponse>() {
             @Override
             public void onResponse(Call<ItemResponse> call, Response<ItemResponse> response) {
