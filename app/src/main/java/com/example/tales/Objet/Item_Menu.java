@@ -1,29 +1,36 @@
 package com.example.tales.Objet;
-import android.widget.Button;
+import com.google.gson.annotations.SerializedName;
 
 public class Item_Menu {
 
-    private String categorie;
-    private Integer imag;
+    @SerializedName("Icon")
+    private String url_img;
+    @SerializedName("Name")
+    private String name_item;
+    @SerializedName("Description")
+    private String description_item;
 
-    public Item_Menu(String categorie, Integer imag) {
-        this.categorie = categorie;
-        this.imag = imag;
+    public String getUrl_img() {
+        return url_img;
     }
 
-    public String getCategorie() {
-        return categorie;
+    public void setUrl_img(String url_img) {
+        this.url_img = url_img;
     }
 
-    public void setCategorie(String categorie) {
-        this.categorie = categorie;
+    public String getName_item() {
+        return name_item;
     }
 
-    public Integer getImag() {
-        return imag;
+    public void setName_item(String name_item) {
+        this.name_item = name_item;
     }
 
-    public void setImag(Integer imag) {
-        this.imag = imag;
+    public String getDescription_item() {
+        return description_item;
+    }
+
+    public void setDescription_item(String description_item) {
+        this.description_item = description_item;
     }
 }
