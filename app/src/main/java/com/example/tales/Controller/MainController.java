@@ -36,7 +36,7 @@ public class MainController {
                 .create();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://github.com/Rebecca-P/Tales_ofData/blob/master/")
+                .baseUrl("https://raw.githubusercontent.com/Rebecca-P/Tales_ofData/master/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

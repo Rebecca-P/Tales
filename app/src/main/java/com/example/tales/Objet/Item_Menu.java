@@ -5,7 +5,7 @@ public class Item_Menu {
 
     @SerializedName("Icon")
     private String url_img;
-    @SerializedName("Name")
+    @SerializedName("Name EN")
     private String name_item;
     @SerializedName("Description")
     private String description_item;

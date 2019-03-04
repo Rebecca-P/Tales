@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 
 public interface TOV_API {
 
-    @GET("item")
+    @GET("item.json")
     Call<ItemResponse> getResultts();
 }

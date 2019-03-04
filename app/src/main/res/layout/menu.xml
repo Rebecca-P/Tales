@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:background="@color/fond">
+    android:background="@color/fond">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,14 +68,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <ImageView
             android:id="@+id/iconconsomable"
             android:layout_width="146dp"
             android:layout_height="75dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/conso" />
+            app:srcCompat="@drawable/conso"
+            android:background="@drawable/g4540"/>
 
         <Button
             android:id="@+id/button2"
