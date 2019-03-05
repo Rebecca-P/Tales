@@ -74,25 +74,25 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         Arte_Menu actual = arte_element.get(position);
-        ArrayList<String> url_mini= new ArrayList<String>();
+
         String[] url_mini= actual.getDetail().split(" ");
 
 
         //image
-        Picasso.get().load(actual.getUrl_img()).into(holder.iconoimage);
-        Picasso.get().load(actual.getType()).into(holder.iconoimage);
-        Picasso.get().load(url_mini[0]).into(holder.iconoimage);
-        if (mots.length>1)
-        Picasso.get().load(url_mini[1]).into(holder.iconoimage);
-        if (mots.length>2)
-        Picasso.get().load(url_mini[2]).into(holder.iconoimage);
+        Picasso.get().load(actual.getUrl_img()).into(holder.iconperso);
+        Picasso.get().load(actual.getType()).into(holder.icontype);
+        Picasso.get().load(url_mini[0]).into(holder.icontype1);
+        if (url_mini.length>1)
+        Picasso.get().load(url_mini[1]).into(holder.icontype2);
+        if (url_mini.length>2)
+        Picasso.get().load(url_mini[2]).into(holder.icontype3);
 
         //texte
         holder.titrenotitle.setText(actual.getName_item());
-        holder.descriptionnodes.setText(actual.getDescription_item());
-        holder.titrenotitle.setText(actual.getDetail());
-        holder.titrenotitle.setText(actual.getAlter());
-        holder.titrenotitle.setText(actual.getCapacite());
+        holder.description1.setText(actual.getDescription_item());
+        holder.description2.setText(actual.getDetail());
+        holder.descriptionalter.setText(actual.getAlter());
+        holder.descriptionskill.setText(actual.getCapacite());
 
 
     }

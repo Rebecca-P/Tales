@@ -91,7 +91,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:contentDescription="row"
-                android:src="@drawable/syn"></ImageView>
+                ></ImageView>
 
             <ImageView
                 android:id="@+id/icon_type3"
@@ -103,7 +103,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:contentDescription="row"
-                android:src="@drawable/syn"></ImageView>
+                ></ImageView>
         </TableRow>
 
         <TableRow
@@ -153,7 +153,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="123dp"
                 android:layout_weight="1"
-                android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="@color/police" />
 
@@ -162,7 +161,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="123dp"
                 android:layout_weight="1"
-                android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="@color/police" />
         </TableRow>

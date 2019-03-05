@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.tales.Adapters.MyAdapter1;
+import com.example.tales.Adapters.MyAdapter2;
 import com.example.tales.Controller.MainController;
 import com.example.tales.Objet.Arte_Menu;
 import com.example.tales.Objet.Item_Menu;
@@ -36,7 +37,7 @@ public class Menu1Arte extends AppCompatActivity {
         rv_menu.setHasFixedSize(true);
         rv_layout = new LinearLayoutManager(this);
         rv_menu.setLayoutManager(rv_layout);
-        rv_adapter= new MyAdapter1(arte);
+        rv_adapter= new MyAdapter2(arte);
         rv_menu.setAdapter(rv_adapter);
     }
 
