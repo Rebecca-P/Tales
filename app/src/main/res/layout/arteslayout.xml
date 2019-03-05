@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fon">
+
+
+    <ImageView
+        android:id="@+id/icon_perso_arte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="row"
+        android:src="@drawable/syn"></ImageView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_type"
+                android:layout_width="23dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:contentDescription="row"
+                android:src="@drawable/syn"></ImageView>
+
+            <TextView
+                android:id="@+id/titre_art"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="cursive"
+                android:text="Titre"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/descrip1"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/police" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_type1"
+                android:layout_width="23dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:contentDescription="row"
+                android:src="@drawable/syn"></ImageView>
+
+            <ImageView
+                android:id="@+id/icon_type2"
+                android:layout_width="23dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:contentDescription="row"
+                android:src="@drawable/syn"></ImageView>
+
+            <ImageView
+                android:id="@+id/icon_type3"
+                android:layout_width="23dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:contentDescription="row"
+                android:src="@drawable/syn"></ImageView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/descrip2"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/police" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/alter"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="Alter"
+                android:textAlignment="center"
+                android:textColor="@color/police" />
+
+            <TextView
+                android:id="@+id/skill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Skill"
+                android:textAlignment="center"
+                android:textColor="@color/police" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/responsealter"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/police" />
+
+            <TextView
+                android:id="@+id/responseskill"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/police" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

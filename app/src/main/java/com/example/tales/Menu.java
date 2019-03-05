@@ -65,10 +65,4 @@ public class Menu extends AppCompatActivity{
 
 
 }
-//TODO
-/*
-* Remplacer par des boutons
-* et pour chaque boutons
-* leur envoyer la liste
-*
-* */
+
