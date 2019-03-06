@@ -9,13 +9,14 @@ import android.widget.TextView;
 import com.example.tales.Objet.Arte_Menu;
 import com.example.tales.Objet.Item_Menu;
 import com.example.tales.R;
+import com.example.tales.RecyclerTouchListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 
 public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
-    private ArrayList<Arte_Menu> arte_element;
+    public ArrayList<Arte_Menu> arte_element;
 
     public MyAdapter2(ArrayList<Arte_Menu> arte_element) {
         this.arte_element = arte_element;
@@ -27,17 +28,11 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         //image
-        public ImageView iconperso;
-        public ImageView icontype;
-        public ImageView icontype1;
-        public ImageView icontype2;
-        public ImageView icontype3;
+        public ImageView iconnoperso;
+
         //Texte
-        public TextView titrenotitle;
-        public TextView description1;
-        public TextView description2;
-        public TextView descriptionalter;
-        public TextView descriptionskill;
+        public TextView namenoperso;
+
         //View
         public View layout;
 
@@ -48,24 +43,17 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
             super(avoir);
             layout = avoir;
             //image
-            iconperso = (ImageView) avoir.findViewById(R.id.icon_perso_arte);
-            icontype = (ImageView) avoir.findViewById(R.id.icon_type);
-            icontype1 = (ImageView) avoir.findViewById(R.id.icon_type1);
-            icontype2 = (ImageView) avoir.findViewById(R.id.icon_type2);
-            icontype3 = (ImageView) avoir.findViewById(R.id.icon_type3);
+            iconnoperso = (ImageView) avoir.findViewById(R.id.iconoperso);
 
             //texte
-            titrenotitle = (TextView) avoir.findViewById(R.id.titre_art);
-            description1 = (TextView) avoir.findViewById(R.id.descrip1);
-            description2 = (TextView) avoir.findViewById(R.id.descrip2);
-            descriptionalter = (TextView) avoir.findViewById(R.id.responsealter);
-            descriptionskill = (TextView) avoir.findViewById(R.id.responseskill);
+            namenoperso = (TextView) avoir.findViewById(R.id.namenoperso);
+
         }
     }
     @Override
     public MyAdapter2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.itemlayout, parent, false);
+        View view = inflater.inflate(R.layout.artesimple, parent, false);//a changer ici aussi
         ViewHolder enfin = new ViewHolder(view);
         return enfin ;
     }
@@ -76,23 +64,18 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
         Arte_Menu actual = arte_element.get(position);
 
         String[] url_mini= actual.getDetail().split(" ");
-
+        String titre = actual.getName_item();
 
         //image
-        Picasso.get().load(actual.getUrl_img()).into(holder.iconperso);
-        Picasso.get().load(actual.getType()).into(holder.icontype);
-        Picasso.get().load(url_mini[0]).into(holder.icontype1);
-        if (url_mini.length>1)
-        Picasso.get().load(url_mini[1]).into(holder.icontype2);
-        if (url_mini.length>2)
-        Picasso.get().load(url_mini[2]).into(holder.icontype3);
+        Picasso.get().load(actual.getUrl_img())
+                .resize(75,75)
+                .into(holder.iconnoperso);
+
 
         //texte
-        holder.titrenotitle.setText(actual.getName_item());
-        holder.description1.setText(actual.getDescription_item());
-        holder.description2.setText(actual.getDetail());
-        holder.descriptionalter.setText(actual.getAlter());
-        holder.descriptionskill.setText(actual.getCapacite());
+        holder.namenoperso.setText(titre);
+
+
 
 
     }

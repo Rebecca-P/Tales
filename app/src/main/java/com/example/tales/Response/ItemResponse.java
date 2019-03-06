@@ -9,13 +9,6 @@ public class ItemResponse {
     @SerializedName("item")
     private ArrayList<Item_Menu> item_element;
 
-    /*public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }*/
 
     public ArrayList<Item_Menu> getItem_element() {
         return item_element;

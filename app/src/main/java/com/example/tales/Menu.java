@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.content.Intent;
 
+import com.example.tales.Menu_java.Menu1Arte;
 import com.example.tales.Menu_java.Menu1Item;
 
 
@@ -34,7 +35,7 @@ public class Menu extends AppCompatActivity{
 
     public void goToArtes (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1Item.class);
+        Intent nameIntent = new Intent(this, Menu1Arte.class);
         startActivity(nameIntent);
     }
 

@@ -119,7 +119,7 @@
             android:textAlignment="center"
             android:textColor="@color/police"
             android:textSize="30sp"
-            android:onClick="goToItem" />
+            android:onClick="goToArtes" />
 
     </LinearLayout>
 

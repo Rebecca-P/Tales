@@ -25,7 +25,7 @@ import java.util.List;
 public class MainController {
     private Menu1Conso view_conso;
     private Menu1Arte view_Arte;
-    //private MainActivity view;
+
     public Gson gson ;
     public Retrofit retrofit ;
     public TOV_API tov_api;
