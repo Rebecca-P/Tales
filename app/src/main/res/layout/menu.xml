@@ -4,123 +4,272 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fond"
     android:orientation="vertical"
-    android:background="@color/fond">
+    android:padding="5dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="87dp"
-            android:layout_height="75dp"
-            app:srcCompat="@drawable/loupe" />
 
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:fontFamily="@font/belgrano"
-            android:inputType="textPersonName"
-            android:text="RECHERCHE"
-            android:textAlignment="center"
-            android:textColor="@color/police" />
-
-    </LinearLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/Title"
-            android:layout_width="167dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="8dp"
-            android:fontFamily="@font/belgrano"
-            android:text="MENU"
-            android:textAlignment="center"
-            android:textColor="@color/police"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menuunder" />
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    </android.support.constraint.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="87dp"
+                    android:layout_height="75dp"
+                    app:srcCompat="@drawable/loupe" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:fontFamily="@font/belgrano"
+                    android:inputType="textPersonName"
+                    android:text="RECHERCHE"
+                    android:textAlignment="center"
+                    android:textColor="@color/police" />
 
-        <ImageView
-            android:id="@+id/iconconsomable"
-            android:layout_width="146dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/conso"
-            android:background="@drawable/g4540"/>
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:fontFamily="cursive"
-            android:text="ITEMS"
-            android:textAlignment="center"
-            android:textColor="@color/police"
-            android:textSize="30sp"
-            android:onClick="goToItem" />
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/Title"
+                    android:layout_width="167dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/belgrano"
+                    android:text="MENU"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                    app:layout_constraintHorizontal_bias="0.09"
+                    app:layout_constraintStart_toStartOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/menuunder" />
 
-        <ImageView
-            android:id="@+id/iconart"
-            android:layout_width="146dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/main01"
-            android:background="@drawable/g4540"/>
+            </android.support.constraint.ConstraintLayout>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:fontFamily="cursive"
-            android:text="ARTES"
-            android:textAlignment="center"
-            android:textColor="@color/police"
-            android:textSize="30sp"
-            android:onClick="goToArtes" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/iconconsomable"
+                    android:layout_width="146dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/g4540"
+                    app:srcCompat="@drawable/conso" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/belgrano"
+                    android:onClick="goToItem"
+                    android:text="ITEMS"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconart"
+                    android:layout_width="146dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/g4540"
+                    app:srcCompat="@drawable/main01" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/belgrano"
+                    android:onClick="goToArtes"
+                    android:text="ARTES"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconequip"
+                    android:layout_width="146dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/g4540"
+                    app:srcCompat="@drawable/main02" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/belgrano"
+                    android:onClick="goToArtes"
+                    android:text="EQUIPEMENT"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconskill"
+                    android:layout_width="146dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/g4540"
+                    app:srcCompat="@drawable/main04" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/belgrano"
+                    android:onClick="goToArtes"
+                    android:text="SKILL"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconrecette"
+                    android:layout_width="146dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/g4540"
+                    app:srcCompat="@drawable/main06" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/belgrano"
+                    android:onClick="goToArtes"
+                    android:text="RECIPES"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconrecharacter"
+                    android:layout_width="146dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/g4540"
+                    app:srcCompat="@drawable/main07" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/belgrano"
+                    android:onClick="goToArtes"
+                    android:text="CHARACTER"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconmap"
+                    android:layout_width="146dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/g4540"
+                    app:srcCompat="@drawable/sub10" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/belgrano"
+                    android:onClick="goToArtes"
+                    android:text="WORLD"
+                    android:textAlignment="center"
+                    android:textColor="@color/police"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

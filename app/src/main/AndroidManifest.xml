@@ -28,6 +28,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Menu_java.Menu1Arte"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Artedetail"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu1Syn"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Syndetail"
+            android:screenOrientation="portrait"/>
 
     </application>
 

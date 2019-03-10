@@ -24,7 +24,7 @@ public class Menu1Item extends AppCompatActivity{
 
     public void goToSynt (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1Item.class);
+        Intent nameIntent = new Intent(this, Menu1Syn.class);
         startActivity(nameIntent);
     }
 }

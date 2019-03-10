@@ -8,17 +8,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.tales.Adapters.MyAdapter1;
-import com.example.tales.Adapters.MyAdapter2;
+import com.example.tales.Adapters.MyAdapter3;
 import com.example.tales.Controller.MainController;
 import com.example.tales.Objet.Arte_Menu;
 import com.example.tales.Objet.Item_Menu;
+import com.example.tales.Objet.Synthese;
 import com.example.tales.R;
 import com.example.tales.RecyclerTouchListener;
 
-
 import java.util.ArrayList;
 
-public class Menu1Arte extends AppCompatActivity {
+public class Menu1Syn extends AppCompatActivity {
     private RecyclerView rv_menu;
     private RecyclerView.Adapter rv_adapter;
     private RecyclerView.LayoutManager rv_layout;
@@ -30,36 +30,34 @@ public class Menu1Arte extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sousmenu);
 
-        nameIntent = new Intent(this, Artedetail.class);
+        nameIntent = new Intent(this, Syndetail.class);
         rv_menu = (RecyclerView) findViewById(R.id.thingslist);
-
         controller = new MainController(this);
         controller.onCreate();
-        controller.arte_liste();
+        controller.syn_liste();
 
     }
 
-    public void showArte(final ArrayList<Arte_Menu> arte) {
+    public void showSyn(final ArrayList<Synthese> synlist) {
         rv_menu.setHasFixedSize(true);
         rv_layout = new LinearLayoutManager(this);
         rv_menu.setLayoutManager(rv_layout);
-        rv_adapter= new MyAdapter2(arte);
+        rv_adapter= new MyAdapter3(synlist);
         rv_menu.setAdapter(rv_adapter);
 
         rv_menu.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rv_menu, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Arte_Menu arte_menu= arte.get(position);
+                Synthese synthese_item= synlist.get(position);
 
 
-                nameIntent.putExtra("url_img", arte_menu.getUrl_img());
-                nameIntent.putExtra("type", arte_menu.getType());
-                nameIntent.putExtra("name_item", arte_menu.getName_item());
-                nameIntent.putExtra("description_item", arte_menu.getDescription_item());
-                nameIntent.putExtra("detail", arte_menu.getDetail());
-                nameIntent.putExtra("tp_level", arte_menu.getTp_level());
-                nameIntent.putExtra("alter", arte_menu.getAlter());
-                nameIntent.putExtra("capacite", arte_menu.getCapacite());
+                nameIntent.putExtra("Icon", synthese_item.getIcon());
+                nameIntent.putExtra("Name", synthese_item.getName());
+                nameIntent.putExtra("Description", synthese_item.getDescription());
+                nameIntent.putExtra("Dropped", synthese_item.getDropped());
+                nameIntent.putExtra("Stolen", synthese_item.getStolen());
+                nameIntent.putExtra("Search_Points", synthese_item.getSp());
+
 
                 startActivity(nameIntent);
 

@@ -7,23 +7,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.tales.Objet.Arte_Menu;
-import com.example.tales.Objet.Item_Menu;
+import com.example.tales.Objet.Synthese;
 import com.example.tales.R;
-import com.example.tales.RecyclerTouchListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 
-public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
-    public ArrayList<Arte_Menu> arte_element;
+public class MyAdapter3 extends RecyclerView.Adapter<MyAdapter3.ViewHolder>{
+    public ArrayList<Synthese> synlist;
 
-    public MyAdapter2(ArrayList<Arte_Menu> arte_element) {
-        this.arte_element = arte_element;
+    public MyAdapter3(ArrayList<Synthese> synlist) {
+        this.synlist = synlist;
     }
 
     public int getItemCount() {
-        return arte_element.size();
+        return synlist.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -51,7 +50,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
         }
     }
     @Override
-    public MyAdapter2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyAdapter3.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.artesimple, parent, false);//a changer ici aussi
         ViewHolder enfin = new ViewHolder(view);
@@ -59,16 +58,16 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>{
     }
 
     //@Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {//ppoo
 
-        Arte_Menu actual = arte_element.get(position);
+        Synthese actual = synlist.get(position);
 
 
-        String titre = actual.getName_item();
+        String titre = actual.getName();
 
         //image
-        Picasso.get().load(actual.getUrl_img())
-                .resize(75,75)
+        Picasso.get().load(actual.getIcon())
+                .resize(100,100)
                 .into(holder.iconnoperso);
 
 
