@@ -9,6 +9,7 @@ import android.view.View;
 import android.content.Intent;
 
 import com.example.tales.Menu_java.Menu1Arte;
+import com.example.tales.Menu_java.Menu1Equi;
 import com.example.tales.Menu_java.Menu1Item;
 
 
@@ -41,7 +42,7 @@ public class Menu extends AppCompatActivity{
 
     public void goToEquipement (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1Item.class);
+        Intent nameIntent = new Intent(this, Menu1Equi.class);
         startActivity(nameIntent);
     }
 
@@ -58,6 +59,12 @@ public class Menu extends AppCompatActivity{
     }
 
     public void goToCharacters (View view)
+    {
+        Intent nameIntent = new Intent(this, Menu1Item.class);
+        startActivity(nameIntent);
+    }
+
+    public void goToRecipe (View view)
     {
         Intent nameIntent = new Intent(this, Menu1Item.class);
         startActivity(nameIntent);

@@ -81,7 +81,7 @@
             android:layout_height="75dp"
             android:background="@color/colorAccent"
             android:fontFamily="@font/belgrano"
-            android:onClick="goToConso"
+            android:onClick="goToArme"
             android:text="Armes"
             android:textColor="@color/police" />
     </LinearLayout>

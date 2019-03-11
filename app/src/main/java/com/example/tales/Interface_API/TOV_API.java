@@ -1,6 +1,7 @@
 package com.example.tales.Interface_API;
 
 import com.example.tales.Response.ArteResponse;
+import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
 import com.example.tales.Response.SynResponse;
 
@@ -17,29 +18,32 @@ public interface TOV_API {
 
     @GET("synthese.json")
     Call<SynResponse> getResultsyn();
+
     //arme
     @GET("sword.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultsword();
     @GET("axe.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultaxe();
     @GET("spear.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultspear();
     @GET("Maul.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultmaul();
     @GET("Staff.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultstaff();
     @GET("Mace_baguette.json")
-    Call<SynResponse> getResultsyn();
-    @GET("belt.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultmace();
+    @GET("Belt.json")
+    Call<EquiResponse> getResultbelt();
     @GET("Chain_Whip.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultwhip();
     @GET("bow_light.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultlight();
     @GET("bow_eavy.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResulteavy();
     @GET("dagger.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultdagger();
     @GET("knife.json")
-    Call<SynResponse> getResultsyn();
+    Call<EquiResponse> getResultknife();
+
+
 }

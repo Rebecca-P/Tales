@@ -19,9 +19,9 @@ public class EquiResponse {
     public ArrayList<Equipement_item> staff;
     @SerializedName("mace")
     public ArrayList<Equipement_item> mace;
-    @SerializedName("echarpe")
-    public ArrayList<Equipement_item> echarpe;
-    @SerializedName("chaine")
+    @SerializedName("belt")
+    public ArrayList<Equipement_item> belt;
+    @SerializedName("chain")
     public ArrayList<Equipement_item> chaine;
     @SerializedName("light")
     public ArrayList<Equipement_item> light;
@@ -80,12 +80,12 @@ public class EquiResponse {
         this.mace = mace;
     }
 
-    public ArrayList<Equipement_item> getEcharpe() {
-        return echarpe;
+    public ArrayList<Equipement_item> getBelt() {
+        return belt;
     }
 
-    public void setEcharpe(ArrayList<Equipement_item> echarpe) {
-        this.echarpe = echarpe;
+    public void setBelt(ArrayList<Equipement_item> belt) {
+        this.belt = belt;
     }
 
     public ArrayList<Equipement_item> getChaine() {
@@ -126,5 +126,22 @@ public class EquiResponse {
 
     public void setKnife(ArrayList<Equipement_item> knife) {
         this.knife = knife;
+    }
+
+    public ArrayList<ArrayList<Equipement_item>> getAll() {
+        ArrayList<ArrayList<Equipement_item>> all_equi = new ArrayList<ArrayList<Equipement_item>>();
+        all_equi.add(sword);
+        all_equi.add(axe);
+        all_equi.add(spear);
+        all_equi.add(maul);
+        all_equi.add(staff);
+        all_equi.add(mace);
+        //all_equi.add(echarpe);
+        all_equi.add(chaine);
+        all_equi.add(light);
+        all_equi.add(eavy);
+        all_equi.add(dagger);
+        all_equi.add(knife);
+        return all_equi;
     }
 }

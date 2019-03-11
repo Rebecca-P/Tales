@@ -34,6 +34,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Menu_java.Syndetail"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu1Equi"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu2Arme"
+            android:screenOrientation="portrait"/>
 
     </application>
 
