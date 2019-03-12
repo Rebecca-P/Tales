@@ -79,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tosword"
                 app:srcCompat="@drawable/sword" />
 
             <ImageButton
@@ -86,6 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="toaxe"
                 app:srcCompat="@drawable/axe" />
 
             <ImageButton
@@ -93,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tospear"
                 app:srcCompat="@drawable/lance" />
 
             <ImageButton
@@ -100,6 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tomaul"
                 app:srcCompat="@drawable/maul" />
 
             <ImageButton
@@ -107,6 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tostaff"
                 app:srcCompat="@drawable/masse" />
 
             <ImageButton
@@ -114,6 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tomace"
                 app:srcCompat="@drawable/mag" />
 
             <ImageButton
@@ -121,6 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="toecharpe"
                 app:srcCompat="@drawable/echarpe" />
 
             <ImageButton
@@ -128,6 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tochaine"
                 app:srcCompat="@drawable/chaine" />
 
             <ImageButton
@@ -135,6 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tolight"
                 app:srcCompat="@drawable/bow_l" />
 
             <ImageButton
@@ -142,6 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="toeavy"
                 app:srcCompat="@drawable/bow_e" />
 
             <ImageButton
@@ -149,6 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="todagger"
                 app:srcCompat="@drawable/dagger" />
 
             <ImageButton
@@ -156,6 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="toknnife"
                 app:srcCompat="@drawable/knife" />
         </LinearLayout>
     </ScrollView>

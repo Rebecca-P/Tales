@@ -127,7 +127,7 @@ public class MainController {
         });
     }
 
-    public Call callequipement(int i)
+    /*public Call callequipement(int i)
     {
         Call<EquiResponse> call;
         switch (i) {
@@ -175,12 +175,12 @@ public class MainController {
         }
 
         return call;
-    }
+    }*/
 
     public void arme_liste()
     {
         all_equi = new ArrayList<ArrayList<Equipement_item>>();
-        for (i=1 ; i<13; i++)
+        /*for (i=1 ; i<13; i++)
         {
             Call<EquiResponse> call = callequipement(i);
 
@@ -227,7 +227,7 @@ public class MainController {
                             equilist = equiResponse.getKnife();
                             break;
                         default:
-                            equilist = equiResponse.getKnife();
+                            equilist = equiResponse.getSword();
                             break;
 
 
@@ -245,23 +245,45 @@ public class MainController {
                 }
             });
         }
-        view_arme.showArme(all_equi);
+        view_arme.showArme(all_equi);*/
 
-        //Call<EquiResponse> call = tov_api.getResultaxe();
-        /*Call<EquiResponse> call = callequipement(12);
+        Call<EquiResponse> call = tov_api.getResultArme();
         call.enqueue(new Callback<EquiResponse>() {
             @Override
             public void onResponse(Call<EquiResponse> call, Response<EquiResponse> response) {
-                EquiResponse synResponse = response.body();
-                ArrayList<Equipement_item> synlist = synResponse.getKnife();
-                view_arme.showArme(synlist);
+                EquiResponse armResponse = response.body();
+                all_equi.add(armResponse.getSword());
+                all_equi.add(armResponse.getAxe());
+                all_equi.add(armResponse.getSpear());
+                all_equi.add(armResponse.getMaul());
+                all_equi.add(armResponse.getMace());
+                all_equi.add(armResponse.getBelt());
+                all_equi.add(armResponse.getChaine());
+                all_equi.add(armResponse.getLight());
+                all_equi.add(armResponse.getEavy());
+                all_equi.add(armResponse.getDagger());
+                all_equi.add(armResponse.getKnife());
+
+                /*ArrayList<Equipement_item> synlist = armResponse.getSword();
+                ArrayList<Equipement_item> synlist = armResponse.getAxe();
+                ArrayList<Equipement_item> synlist = armResponse.getSpear();
+                ArrayList<Equipement_item> synlist = armResponse.getMaul();
+                ArrayList<Equipement_item> synlist = armResponse.getMace();
+                ArrayList<Equipement_item> synlist = armResponse.getBelt();
+                ArrayList<Equipement_item> synlist = armResponse.getChaine();
+                ArrayList<Equipement_item> synlist = armResponse.getLight();
+                ArrayList<Equipement_item> synlist = armResponse.getEavy();
+                ArrayList<Equipement_item> synlist = armResponse.getDagger();
+                ArrayList<Equipement_item> synlist = armResponse.getKnife();*/
+
+                view_arme.showArme(all_equi);
             }
 
             @Override
             public void onFailure(Call<EquiResponse> call, Throwable t) {
                 Log.d("ERROR", "Api Error");
             }
-        });*/
+        });
 
     }
 

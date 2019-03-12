@@ -27,6 +27,7 @@ public class Menu2Arme extends AppCompatActivity{
     private MainController controller;
     private Intent nameIntent ;
     private int number_view;
+    private ArrayList<ArrayList<Equipement_item>> all_equi;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,76 +42,144 @@ public class Menu2Arme extends AppCompatActivity{
         controller.arme_liste();
     }
 
-    public void tosword()
+    public void tosword(View view)
     {
         number_view=0;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
+
     }
 
-    public void toaxe()
+    public void toaxe(View view)
     {
         number_view=1;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void tospear()
+    public void tospear(View view)
     {
         number_view=2;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void tomaul()
+    public void tomaul(View view)
     {
         number_view=3;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void tostaff()
+    public void tostaff(View view)
     {
         number_view=4;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void tomace()
+    public void tomace(View view)
     {
         number_view=5;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void toecharpe()
+    public void toecharpe(View view)
     {
         number_view=6;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void tochaine()
+    public void tochaine(View view)
     {
         number_view=7;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void tolight()
+    public void tolight(View view)
     {
         number_view=8;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void toeavy()
+    public void toeavy(View view)
     {
         number_view=9;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void todagger()
+    public void todagger(View view)
     {
         number_view=10;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void toknnife()
+    public void toknnife(View view)
     {
         number_view=11;
+        rv_adapter= new MyAdapter4(all_equi.get(number_view));
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+        rv_menu.removeAllViews();
     }
 
-    public void showArme(final ArrayList<ArrayList<Equipement_item>> all_equi) {
+    public void showArme(final ArrayList<ArrayList<Equipement_item>> equi) {
     //public void showArme(final ArrayList<Equipement_item> all_equi) {
-        number_view=1;
+        //number_view=1;
+        all_equi=equi;
         rv_menu.setHasFixedSize(true);
         rv_layout = new LinearLayoutManager(this);
         rv_menu.setLayoutManager(rv_layout);
-        rv_adapter= new MyAdapter4(all_equi.get(number_view));
-        //rv_adapter= new MyAdapter4(all_equi);
+
+        rv_adapter= new MyAdapter4(all_equi.get(3));
+
         rv_menu.setAdapter(rv_adapter);
 
+        rv_adapter.notifyDataSetChanged();
+        rv_menu.setAdapter(rv_adapter);
+        rv_menu.invalidate();
+
+        //.notifyItemRangeChanged(0, itemList.size());
         rv_menu.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rv_menu, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {

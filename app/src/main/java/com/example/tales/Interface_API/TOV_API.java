@@ -45,5 +45,9 @@ public interface TOV_API {
     @GET("knife.json")
     Call<EquiResponse> getResultknife();
 
+    //
+    @GET("Arme.json")
+    Call<EquiResponse> getResultArme();
+
 
 }
