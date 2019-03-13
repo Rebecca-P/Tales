@@ -28,20 +28,21 @@ import java.util.*;
 import java.lang.Class;
 
 public class Artedetail extends AppCompatActivity {
+    //TODO changer en public si probleme
     //image
-    public ImageView url_img;
-    public ImageView type;
-    public ImageView detail1;
-    public ImageView detail2;
-    public ImageView detail3;
-    public ImageView detail4;
+    private ImageView url_img;
+    private ImageView type;
+    private ImageView detail1;
+    private ImageView detail2;
+    private ImageView detail3;
+    private ImageView detail4;
 
     //Texte
-    public TextView name_item;
-    public TextView description_item;
-    public TextView tp_level;
-    public TextView alter;
-    public TextView capacite;
+    private TextView name_item;
+    private TextView description_item;
+    private TextView tp_level;
+    private TextView alter;
+    private TextView capacite;
 
     //View
     //public View layout;
@@ -107,22 +108,22 @@ public class Artedetail extends AppCompatActivity {
                 .into(this.type);
         if (vrai.size()>= 1)
         {
-            Log.wtf("vrai 0",vrai.get(0));
+
             Picasso.get().load(vrai.get(0)).into(this.detail1);
         }
         if (vrai.size()>= 2)
         {
-            Log.wtf("vrai 1",vrai.get(1));
+
             Picasso.get().load(vrai.get(1)).into(this.detail2);
         }
         if (vrai.size()>= 3)
         {
-            Log.wtf("vrai 2",vrai.get(2));
+
             Picasso.get().load(vrai.get(2)).into(this.detail3);
         }
         if (vrai.size()>= 4)
         {
-            Log.wtf("vrai 3",vrai.get(3));
+
             Picasso.get().load(vrai.get(3)).into(this.detail4);
         }
 

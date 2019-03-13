@@ -38,6 +38,16 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Menu_java.Menu2Arme"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Equipementdetail"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu2Second"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu2Head"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu2Body"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu2Acce"
+            android:screenOrientation="portrait"/>
 
     </application>
 

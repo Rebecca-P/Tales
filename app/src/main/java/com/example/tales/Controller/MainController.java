@@ -12,12 +12,17 @@ import com.example.tales.Menu_java.Menu1Arte;
 import com.example.tales.Menu_java.Menu1Conso;
 import com.example.tales.Menu_java.Menu1Equi;
 import com.example.tales.Menu_java.Menu1Syn;
+import com.example.tales.Menu_java.Menu2Acce;
 import com.example.tales.Menu_java.Menu2Arme;
+import com.example.tales.Menu_java.Menu2Body;
+import com.example.tales.Menu_java.Menu2Head;
+import com.example.tales.Menu_java.Menu2Second;
 import com.example.tales.Objet.Arte_Menu;
 import com.example.tales.Objet.Equipement_item;
 import com.example.tales.Objet.Item_Menu;
 import com.example.tales.Objet.Synthese;
 import com.example.tales.Response.ArteResponse;
+import com.example.tales.Response.Equi2Response;
 import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
 import com.example.tales.Response.SynResponse;
@@ -34,13 +39,23 @@ public class MainController {
     private Menu1Arte view_Arte;
     private Menu1Syn view_Syn;
     private Menu2Arme view_arme;
+
+    private Menu2Second view_second;
+
+    private Menu2Body view_body;
+    private Menu2Head view_head;
+    private Menu2Acce view_acce;
+    //TODO  modificagtion a faire
+   /*
+    private Menu3Skill view_skill;
+    private Menu4Recette view_recette;
+    private Menu5Perso view_perso;
+    private Menu6Monde view_monde;
+    */
+
     //
     private int i;
     private  ArrayList<ArrayList<Equipement_item>> all_equi ;
-
-
-
-
 
     public Gson gson ;
     public Retrofit retrofit ;
@@ -57,6 +72,18 @@ public class MainController {
     }
     public MainController(Menu2Arme view_arme) {
         this.view_arme = view_arme;
+    }
+    public MainController(Menu2Second view_second) {
+        this.view_second = view_second;
+    }
+    public MainController(Menu2Head view_head) {
+        this.view_head = view_head;
+    }
+    public MainController(Menu2Body view_body) {
+        this.view_body = view_body;
+    }
+    public MainController(Menu2Acce view_acce) {
+        this.view_acce = view_acce;
     }
 
     public void onCreate() {
@@ -127,126 +154,10 @@ public class MainController {
         });
     }
 
-    /*public Call callequipement(int i)
-    {
-        Call<EquiResponse> call;
-        switch (i) {
-            case 1:
-                 call = tov_api.getResultsword();
-                break;
-            case 2:
-                 call = tov_api.getResultaxe();
-                break;
-            case 3:
-                 call = tov_api.getResultspear();
-                break;
-            case 4:
-                 call = tov_api.getResultmaul();
-                break;
-            case 5:
-                 call = tov_api.getResultstaff();
-                break;
-            case 6:
-                 call = tov_api.getResultmace();
-                break;
-            case 7:
-                 call = tov_api.getResultbelt();
-                break;
-            case 8:
-                 call = tov_api.getResultwhip();
-                break;
-            case 9:
-                 call = tov_api.getResultlight();
-                break;
-            case 10:
-                 call = tov_api.getResulteavy();
-                break;
-            case 11:
-                 call = tov_api.getResultdagger();
-                break;
-            case 12:
-                call = tov_api.getResultknife();
-                break;
-
-                default:
-                     call = tov_api.getResultsword();
-                    break;
-
-        }
-
-        return call;
-    }*/
 
     public void arme_liste()
     {
         all_equi = new ArrayList<ArrayList<Equipement_item>>();
-        /*for (i=1 ; i<13; i++)
-        {
-            Call<EquiResponse> call = callequipement(i);
-
-            call.enqueue(new Callback<EquiResponse>() {
-                @Override
-                public void onResponse(Call<EquiResponse> call, Response<EquiResponse> response) {
-                    EquiResponse equiResponse = response.body();
-                    ArrayList<Equipement_item> equilist;
-                    switch (i) {
-                        case 1:
-                            equilist = equiResponse.getSword();
-                            break;
-                        case 2:
-                            equilist = equiResponse.getAxe();
-                            break;
-                        case 3:
-                            equilist = equiResponse.getSpear();
-                            break;
-                        case 4:
-                            equilist = equiResponse.getMaul();
-                            break;
-                        case 5:
-                            equilist = equiResponse.getStaff();
-                            break;
-                        case 6:
-                            equilist = equiResponse.getMace();
-                            break;
-                        case 7:
-                            equilist = equiResponse.getBelt();
-                            break;
-                        case 8:
-                            equilist = equiResponse.getChaine();
-                            break;
-                        case 9:
-                            equilist = equiResponse.getLight();
-                            break;
-                        case 10:
-                            equilist = equiResponse.getEavy();
-                            break;
-                        case 11:
-                            equilist = equiResponse.getDagger();
-                            break;
-                        case 12:
-                            equilist = equiResponse.getKnife();
-                            break;
-                        default:
-                            equilist = equiResponse.getSword();
-                            break;
-
-
-
-                    }
-
-                    all_equi.add(equilist);
-
-
-                }
-
-                @Override
-                public void onFailure(Call<EquiResponse> call, Throwable t) {
-                    Log.d("ERROR", "Api Error");
-                }
-            });
-        }
-        view_arme.showArme(all_equi);*/
-
         Call<EquiResponse> call = tov_api.getResultArme();
         call.enqueue(new Callback<EquiResponse>() {
             @Override
@@ -256,6 +167,7 @@ public class MainController {
                 all_equi.add(armResponse.getAxe());
                 all_equi.add(armResponse.getSpear());
                 all_equi.add(armResponse.getMaul());
+                all_equi.add(armResponse.getStaff());
                 all_equi.add(armResponse.getMace());
                 all_equi.add(armResponse.getBelt());
                 all_equi.add(armResponse.getChaine());
@@ -263,18 +175,6 @@ public class MainController {
                 all_equi.add(armResponse.getEavy());
                 all_equi.add(armResponse.getDagger());
                 all_equi.add(armResponse.getKnife());
-
-                /*ArrayList<Equipement_item> synlist = armResponse.getSword();
-                ArrayList<Equipement_item> synlist = armResponse.getAxe();
-                ArrayList<Equipement_item> synlist = armResponse.getSpear();
-                ArrayList<Equipement_item> synlist = armResponse.getMaul();
-                ArrayList<Equipement_item> synlist = armResponse.getMace();
-                ArrayList<Equipement_item> synlist = armResponse.getBelt();
-                ArrayList<Equipement_item> synlist = armResponse.getChaine();
-                ArrayList<Equipement_item> synlist = armResponse.getLight();
-                ArrayList<Equipement_item> synlist = armResponse.getEavy();
-                ArrayList<Equipement_item> synlist = armResponse.getDagger();
-                ArrayList<Equipement_item> synlist = armResponse.getKnife();*/
 
                 view_arme.showArme(all_equi);
             }
@@ -287,5 +187,75 @@ public class MainController {
 
     }
 
+    public void second_liste()
+    {
+        Call<Equi2Response> call = tov_api.getResultsecond();
+        call.enqueue(new Callback<Equi2Response>() {
+            @Override
+            public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
+                Equi2Response secondResponse = response.body();
+                ArrayList<Equipement_item> secondlist = secondResponse.getSecond();
+                view_second.showSecond(secondlist);
+            }
 
+            @Override
+            public void onFailure(Call<Equi2Response> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void head_liste()
+    {
+        Call<Equi2Response> call = tov_api.getResulthead();
+        call.enqueue(new Callback<Equi2Response>() {
+            @Override
+            public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
+                Equi2Response headResponse = response.body();
+                ArrayList<Equipement_item> headlist = headResponse.getHead();
+                view_head.showHead(headlist);
+            }
+
+            @Override
+            public void onFailure(Call<Equi2Response> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void body_liste()
+    {
+        Call<Equi2Response> call = tov_api.getResultbody();
+        call.enqueue(new Callback<Equi2Response>() {
+            @Override
+            public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
+                Equi2Response bodyResponse = response.body();
+                ArrayList<Equipement_item> bodylist = bodyResponse.getBody();
+                view_body.showBody(bodylist);
+            }
+
+            @Override
+            public void onFailure(Call<Equi2Response> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void acce_liste()
+    {
+        Call<Equi2Response> call = tov_api.getResultacce();
+        call.enqueue(new Callback<Equi2Response>() {
+            @Override
+            public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
+                Equi2Response acceResponse = response.body();
+                ArrayList<Equipement_item> accelist = acceResponse.getAcce();
+                view_acce.showAcce(accelist);//TODO a changer
+            }
+
+            @Override
+            public void onFailure(Call<Equi2Response> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
 }

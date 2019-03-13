@@ -44,69 +44,96 @@
             <ImageButton
                 android:id="@+id/yuri"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showYuri"
+                android:src="@drawable/yur" />
 
             <ImageButton
                 android:id="@+id/estelle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showEstelle"
+                android:src="@drawable/est"
+                 />
 
             <ImageButton
                 android:id="@+id/karol"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showKarol"
+                android:src="@drawable/kar"
+                 />
 
             <ImageButton
                 android:id="@+id/repede"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showRapede"
+                android:src="@drawable/rap"
+                 />
 
             <ImageButton
                 android:id="@+id/flynn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showFlynn"
+                android:src="@drawable/fre"
+                 />
 
             <ImageButton
                 android:id="@+id/rita"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showRita"
+                android:src="@drawable/rit"
+                 />
 
             <ImageButton
                 android:id="@+id/raven"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showRaven"
+                android:src="@drawable/rav"
+                 />
 
             <ImageButton
                 android:id="@+id/judith"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showJudy"
+                android:src="@drawable/jud"
+                 />
 
             <ImageButton
                 android:id="@+id/patty"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/g4540" />
+                android:background="@drawable/g4540"
+                android:onClick="showPatty"
+                android:src="@drawable/pat"
+                />
         </LinearLayout>
     </ScrollView>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/par_perso"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

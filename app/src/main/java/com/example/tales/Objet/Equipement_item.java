@@ -9,7 +9,7 @@ public class Equipement_item {
     private String name_equ;
     @SerializedName("Description")
     private String description_equ;
-    @SerializedName("Personnage")
+    @SerializedName("Presonnage")
     private String url_perso;
     @SerializedName("Capacite")
     private String capacite;

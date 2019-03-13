@@ -77,96 +77,108 @@
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="tosword"
                 app:srcCompat="@drawable/sword" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="toaxe"
                 app:srcCompat="@drawable/axe" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="tospear"
                 app:srcCompat="@drawable/lance" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="tomaul"
                 app:srcCompat="@drawable/maul" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="tostaff"
                 app:srcCompat="@drawable/masse" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="tomace"
                 app:srcCompat="@drawable/mag" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="toecharpe"
                 app:srcCompat="@drawable/echarpe" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="tochaine"
                 app:srcCompat="@drawable/chaine" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="tolight"
                 app:srcCompat="@drawable/bow_l" />
 
             <ImageButton
                 android:id="@+id/imageButton10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="toeavy"
                 app:srcCompat="@drawable/bow_e" />
 
             <ImageButton
                 android:id="@+id/imageButton11"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="todagger"
                 app:srcCompat="@drawable/dagger" />
 
             <ImageButton
                 android:id="@+id/imageButton12"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_weight="1"
+                android:background="@drawable/g4540"
                 android:onClick="toknnife"
                 app:srcCompat="@drawable/knife" />
         </LinearLayout>

@@ -102,7 +102,7 @@
             android:layout_height="75dp"
             android:background="@color/colorAccent"
             android:fontFamily="@font/belgrano"
-            android:onClick="goToSynt"
+            android:onClick="goToSecond"
             android:text="Arme Secondaire"
             android:textColor="@color/police" />
     </LinearLayout>
@@ -123,7 +123,7 @@
             android:layout_height="75dp"
             android:background="@color/colorAccent"
             android:fontFamily="@font/belgrano"
-            android:onClick="goToSynt"
+            android:onClick="goToHead"
             android:text="head"
             android:textColor="@color/police" />
     </LinearLayout>
@@ -139,12 +139,12 @@
             app:srcCompat="@drawable/body" />
 
         <Button
-            android:id="@+id/button_syn"
+
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:background="@color/colorAccent"
             android:fontFamily="@font/belgrano"
-            android:onClick="goToSynt"
+            android:onClick="goToBody"
             android:text="body"
             android:textColor="@color/police" />
     </LinearLayout>
@@ -160,12 +160,12 @@
             app:srcCompat="@drawable/acc" />
 
         <Button
-            android:id="@+id/button_syn"
+
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:background="@color/colorAccent"
             android:fontFamily="@font/belgrano"
-            android:onClick="goToSynt"
+            android:onClick="goToAcce"
             android:text="accessoire"
             android:textColor="@color/police" />
     </LinearLayout>

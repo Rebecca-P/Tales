@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.tales.Adapters.MyAdapter4;
@@ -14,11 +13,10 @@ import com.example.tales.Controller.MainController;
 import com.example.tales.Objet.Equipement_item;
 import com.example.tales.R;
 import com.example.tales.RecyclerTouchListener;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class Menu2Second extends AppCompatActivity{
+public class Menu2Head extends AppCompatActivity{
 
     private RecyclerView rv_menu;
     private RecyclerView.Adapter rv_adapter;
@@ -29,15 +27,6 @@ public class Menu2Second extends AppCompatActivity{
     private ArrayList<Equipement_item> all_equi;
     private ArrayList<Equipement_item> perso;
 
-    private ImageButton yur;
-    private ImageButton est;
-    private ImageButton rep;
-    private ImageButton kar;
-    private ImageButton jud;
-    private ImageButton rav;
-    private ImageButton fle;
-    private ImageButton rit;
-    private ImageButton pat;
 
 
     @Override
@@ -50,7 +39,7 @@ public class Menu2Second extends AppCompatActivity{
 
         controller = new MainController(this);
         controller.onCreate();
-        controller.second_liste();
+        controller.head_liste();
     }
 
     public void showYuri(View view)
@@ -206,7 +195,7 @@ public class Menu2Second extends AppCompatActivity{
         rv_menu.removeAllViews();
     }
 
-    public void showSecond(final ArrayList<Equipement_item> equi) {
+    public void showHead(final ArrayList<Equipement_item> equi) {
 
         all_equi=equi;
         perso=equi;

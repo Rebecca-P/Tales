@@ -32,22 +32,22 @@ public class Menu1Equi extends AppCompatActivity{
     }
     public void goToSecond (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1Item.class);
+        Intent nameIntent = new Intent(this, Menu2Second.class);
         startActivity(nameIntent);
     }
     public void goToHead (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1Item.class);
+        Intent nameIntent = new Intent(this, Menu2Head.class);
         startActivity(nameIntent);
     }
     public void goToBody (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1Item.class);
+        Intent nameIntent = new Intent(this, Menu2Body.class);
         startActivity(nameIntent);
     }
     public void goToAcce (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1Item.class);
+        Intent nameIntent = new Intent(this, Menu2Acce.class);
         startActivity(nameIntent);
     }
 }

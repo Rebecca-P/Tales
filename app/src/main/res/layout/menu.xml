@@ -234,7 +234,7 @@
                     android:background="@color/colorAccent"
                     android:fontFamily="@font/belgrano"
                     android:onClick="goToCharacters"
-                    android:text="CARACTER"
+                    android:text="CHARACTER"
                     android:textAlignment="center"
                     android:textColor="@color/police"
                     android:textSize="30sp" />

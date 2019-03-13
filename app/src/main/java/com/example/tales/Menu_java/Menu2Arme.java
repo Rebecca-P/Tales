@@ -34,7 +34,7 @@ public class Menu2Arme extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sousmenu_arme);
 
-        nameIntent = new Intent(this, Artedetail.class);
+        nameIntent = new Intent(this, Equipementdetail.class);
         rv_menu = (RecyclerView) findViewById(R.id.arme_list);
 
         controller = new MainController(this);
@@ -164,14 +164,12 @@ public class Menu2Arme extends AppCompatActivity{
     }
 
     public void showArme(final ArrayList<ArrayList<Equipement_item>> equi) {
-    //public void showArme(final ArrayList<Equipement_item> all_equi) {
-        //number_view=1;
         all_equi=equi;
         rv_menu.setHasFixedSize(true);
         rv_layout = new LinearLayoutManager(this);
         rv_menu.setLayoutManager(rv_layout);
 
-        rv_adapter= new MyAdapter4(all_equi.get(3));
+        rv_adapter= new MyAdapter4(all_equi.get(0));
 
         rv_menu.setAdapter(rv_adapter);
 
@@ -179,23 +177,25 @@ public class Menu2Arme extends AppCompatActivity{
         rv_menu.setAdapter(rv_adapter);
         rv_menu.invalidate();
 
-        //.notifyItemRangeChanged(0, itemList.size());
+
         rv_menu.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rv_menu, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                //Arte_Menu arte_menu= arte.get(position);
+                ArrayList<Equipement_item> temp = all_equi.get(number_view);
+                Equipement_item equipement= temp.get(position);
 
 
-                /*nameIntent.putExtra("url_img", arte_menu.getUrl_img());
-                nameIntent.putExtra("type", arte_menu.getType());
-                nameIntent.putExtra("name_item", arte_menu.getName_item());
-                nameIntent.putExtra("description_item", arte_menu.getDescription_item());
-                nameIntent.putExtra("detail", arte_menu.getDetail());
-                nameIntent.putExtra("tp_level", arte_menu.getTp_level());
-                nameIntent.putExtra("alter", arte_menu.getAlter());
-                nameIntent.putExtra("capacite", arte_menu.getCapacite());
+                nameIntent.putExtra("url_img", equipement.getUrl_img());
+                nameIntent.putExtra("Nom", equipement.getName_equ());
+                nameIntent.putExtra("Description", equipement.getDescription_equ());
+                nameIntent.putExtra("Personnage", equipement.getUrl_perso());
+                nameIntent.putExtra("Capacite", equipement.getCapacite());
+                nameIntent.putExtra("Prix_Lieux", equipement.getPrix_lieux());
+                nameIntent.putExtra("Stat", equipement.getStat());
+                nameIntent.putExtra("Synthese1", equipement.getSyn1());
+                nameIntent.putExtra("Synthese2", equipement.getSyn2());
 
-                startActivity(nameIntent);*/
+                startActivity(nameIntent);
 
             }
 
