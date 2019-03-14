@@ -17,14 +17,20 @@ import com.example.tales.Menu_java.Menu2Arme;
 import com.example.tales.Menu_java.Menu2Body;
 import com.example.tales.Menu_java.Menu2Head;
 import com.example.tales.Menu_java.Menu2Second;
+import com.example.tales.Menu_java.Menu3Skill;
+import com.example.tales.Menu_java.Menu4Recette;
 import com.example.tales.Objet.Arte_Menu;
 import com.example.tales.Objet.Equipement_item;
 import com.example.tales.Objet.Item_Menu;
+import com.example.tales.Objet.Recette;
+import com.example.tales.Objet.Skill_item;
 import com.example.tales.Objet.Synthese;
 import com.example.tales.Response.ArteResponse;
 import com.example.tales.Response.Equi2Response;
 import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
+import com.example.tales.Response.RecResponse;
+import com.example.tales.Response.SkillResponse;
 import com.example.tales.Response.SynResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -45,11 +51,12 @@ public class MainController {
     private Menu2Body view_body;
     private Menu2Head view_head;
     private Menu2Acce view_acce;
-    //TODO  modificagtion a faire
-   /*
+
+
     private Menu3Skill view_skill;
+    //TODO  modificagtion a faire
     private Menu4Recette view_recette;
-    private Menu5Perso view_perso;
+    /*private Menu5Perso view_perso;
     private Menu6Monde view_monde;
     */
 
@@ -84,6 +91,12 @@ public class MainController {
     }
     public MainController(Menu2Acce view_acce) {
         this.view_acce = view_acce;
+    }
+    public MainController(Menu3Skill view_skill) {
+        this.view_skill = view_skill;
+    }
+    public MainController(Menu4Recette view_recette) {
+        this.view_recette = view_recette;
     }
 
     public void onCreate() {
@@ -254,6 +267,42 @@ public class MainController {
 
             @Override
             public void onFailure(Call<Equi2Response> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void skill_liste()
+    {
+        Call<SkillResponse> call = tov_api.getResultSkill();
+        call.enqueue(new Callback<SkillResponse>() {
+            @Override
+            public void onResponse(Call<SkillResponse> call, Response<SkillResponse> response) {
+                SkillResponse skillResponse = response.body();
+                ArrayList<Skill_item> skilllist = skillResponse.getSkill_element();
+                view_skill.showSkill(skilllist);//TOD
+            }
+
+            @Override
+            public void onFailure(Call<SkillResponse> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void recette_liste()
+    {
+        Call<RecResponse> call = tov_api.getResultRecette();
+        call.enqueue(new Callback<RecResponse>() {
+            @Override
+            public void onResponse(Call<RecResponse> call, Response<RecResponse> response) {
+                RecResponse recResponse = response.body();
+                ArrayList<Recette> recettelist = recResponse.getRecette_element();
+                view_recette.showrecette(recettelist);//TOD
+            }
+
+            @Override
+            public void onFailure(Call<RecResponse> call, Throwable t) {
                 Log.d("ERROR", "Api Error");
             }
         });

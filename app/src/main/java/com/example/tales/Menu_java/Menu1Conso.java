@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.example.tales.Adapters.MyAdapter1;
 import com.example.tales.Controller.MainController;
@@ -20,13 +21,13 @@ public class Menu1Conso extends AppCompatActivity {
     private RecyclerView.Adapter rv_adapter;
     private RecyclerView.LayoutManager rv_layout;
     private MainController controller;
-
+    public TextView titre;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sousmenu);
-
-
+        titre = (TextView) findViewById(R.id.Titlething);
+        this.titre.setText("Consomable");
         rv_menu = (RecyclerView) findViewById(R.id.thingslist);
         controller = new MainController(this);
         controller.onCreate();

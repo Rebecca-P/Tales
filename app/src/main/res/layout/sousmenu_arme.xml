@@ -42,7 +42,7 @@
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/belgrano"
-            android:text="MENU"
+            android:text="ARME"
             android:textAlignment="center"
             android:textColor="@color/police"
             android:textSize="30sp"

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.tales.Adapters.MyAdapter1;
 import com.example.tales.Adapters.MyAdapter3;
@@ -24,12 +25,14 @@ public class Menu1Syn extends AppCompatActivity {
     private RecyclerView.LayoutManager rv_layout;
     private MainController controller;
     private Intent nameIntent ;
+    public TextView titre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sousmenu);
-
+        titre = (TextView) findViewById(R.id.Titlething);
+        this.titre.setText("Materiaux de Synthese");
         nameIntent = new Intent(this, Syndetail.class);
         rv_menu = (RecyclerView) findViewById(R.id.thingslist);
         controller = new MainController(this);

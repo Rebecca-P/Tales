@@ -4,6 +4,8 @@ import com.example.tales.Response.ArteResponse;
 import com.example.tales.Response.Equi2Response;
 import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
+import com.example.tales.Response.RecResponse;
+import com.example.tales.Response.SkillResponse;
 import com.example.tales.Response.SynResponse;
 
 import retrofit2.Call;
@@ -24,24 +26,24 @@ public interface TOV_API {
     //
     @GET("Arme.json")
     Call<EquiResponse> getResultArme();
-    @GET("arme_second.json")//TODO achanger
+    @GET("arme_second.json")
     Call<Equi2Response> getResultsecond();
-    @GET("head.json")//TODO achanger
+    @GET("head.json")
     Call<Equi2Response> getResulthead();
-    @GET("body.json")//TODO achanger
+    @GET("body.json")
     Call<Equi2Response> getResultbody();
-    @GET("accessoire.json")//TODO achanger
+    @GET("accessoire.json")
     Call<Equi2Response> getResultacce();
 
-    //TODO skill
-    /*@GET("Arme.json")
-    Call<EquiResponse> getResultArme();
 
-    //TODO RECIPES
-    @GET("Arme.json")
-    Call<EquiResponse> getResultArme();
+    @GET("skill.json")
+    Call<SkillResponse> getResultSkill();
 
-    //TODO character
+
+    @GET("recette.json")
+    Call<RecResponse> getResultRecette();
+
+    /*//TODO character
     @GET("Arme.json")
     Call<EquiResponse> getResultArme();
 

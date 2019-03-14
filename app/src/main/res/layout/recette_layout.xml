@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="325dp"
+            android:layout_height="134dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:contentDescription="row"
+            android:src="@drawable/syn"></ImageView>
+
+        <TextView
+            android:id="@+id/titre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/belgrano"
+            android:text="Titre"
+            android:textAlignment="center"
+            android:textColor="@color/police"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/descr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/belgrano"
+                android:text="Titre"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/ingre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/belgrano"
+                android:text="Titre"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/effet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/belgrano"
+                android:text="Titre"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="18sp" />
+            <TextView
+            android:id="@+id/evolu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/belgrano"
+            android:text="Titre"
+            android:textAlignment="center"
+            android:textColor="@color/police"
+            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/belgrano"
+                android:text="Likes"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/icon_type01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/dislikes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/belgrano"
+                android:text="Diskiles"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/icon_type5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/good_at"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/belgrano"
+                android:text="Good at"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/icon_type9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/Bad_at"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/belgrano"
+                android:text="Bad at"
+                android:textAlignment="center"
+                android:textColor="@color/police"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/icon_type13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+                <ImageView
+                    android:id="@+id/icon_type16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="row"></ImageView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -6,23 +6,23 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.tales.Objet.Equipement_item;
+import com.example.tales.Objet.Recette;
 import com.example.tales.Objet.Skill_item;
 import com.example.tales.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-//TODO a faire en skill
-public class MyAdapter5 extends RecyclerView.Adapter<MyAdapter5.ViewHolder>{
-    public ArrayList<Skill_item> skilllist;
 
-    public MyAdapter5(ArrayList<Skill_item> skilllist) {
-        this.skilllist = skilllist;
+public class MyAdapter6 extends RecyclerView.Adapter<MyAdapter6.ViewHolder>{
+    public ArrayList<Recette> recettelist;
+
+    public MyAdapter6(ArrayList<Recette> recettelist) {
+        this.recettelist = recettelist;
     }
 
     public int getItemCount() {
-        return skilllist.size();
+        return recettelist.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -50,7 +50,7 @@ public class MyAdapter5 extends RecyclerView.Adapter<MyAdapter5.ViewHolder>{
         }
     }
     @Override
-    public MyAdapter5.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyAdapter6.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.artesimple, parent, false);//a changer ici aussi
         ViewHolder enfin = new ViewHolder(view);
@@ -60,7 +60,7 @@ public class MyAdapter5 extends RecyclerView.Adapter<MyAdapter5.ViewHolder>{
     //@Override
     public void onBindViewHolder(ViewHolder holder, int position) {//ppoo
 
-        Skill_item actual = skilllist.get(position);
+        Recette actual = recettelist.get(position);
 
 
         String titre = actual.getName();

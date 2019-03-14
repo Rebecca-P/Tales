@@ -38,11 +38,11 @@
 
         <TextView
             android:id="@+id/Title"
-            android:layout_width="167dp"
+            android:layout_width="230dp"
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/belgrano"
-            android:text="ITEMS"
+            android:text="EQUIPEMENT"
             android:textAlignment="center"
             android:textColor="@color/police"
             android:textSize="30sp"

@@ -55,7 +55,6 @@ public class Equipementdetail extends AppCompatActivity{
         ArrayList<String> vrai = new ArrayList<String>();
 
         lesdetail=recupintent.getStringExtra("Personnage");
-        //Log.wtf("aaaaaaaaaaaa", lesdetail);
         String lien="";
         int i=0;
 
