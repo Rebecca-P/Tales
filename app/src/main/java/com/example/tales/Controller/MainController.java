@@ -19,19 +19,23 @@ import com.example.tales.Menu_java.Menu2Head;
 import com.example.tales.Menu_java.Menu2Second;
 import com.example.tales.Menu_java.Menu3Skill;
 import com.example.tales.Menu_java.Menu4Recette;
+import com.example.tales.Menu_java.Menu5Perso;
 import com.example.tales.Objet.Arte_Menu;
 import com.example.tales.Objet.Equipement_item;
 import com.example.tales.Objet.Item_Menu;
 import com.example.tales.Objet.Recette;
 import com.example.tales.Objet.Skill_item;
 import com.example.tales.Objet.Synthese;
+import com.example.tales.Objet.Character;
 import com.example.tales.Response.ArteResponse;
+import com.example.tales.Response.ChaResponse;
 import com.example.tales.Response.Equi2Response;
 import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
 import com.example.tales.Response.RecResponse;
 import com.example.tales.Response.SkillResponse;
 import com.example.tales.Response.SynResponse;
+import com.example.tales.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -54,10 +58,10 @@ public class MainController {
 
 
     private Menu3Skill view_skill;
-    //TODO  modificagtion a faire
+
     private Menu4Recette view_recette;
-    /*private Menu5Perso view_perso;
-    private Menu6Monde view_monde;
+    private Menu5Perso view_perso;
+    /*private Menu6Monde view_monde;
     */
 
     //
@@ -97,6 +101,9 @@ public class MainController {
     }
     public MainController(Menu4Recette view_recette) {
         this.view_recette = view_recette;
+    }
+    public MainController(Menu5Perso view_perso) {
+        this.view_perso = view_perso;
     }
 
     public void onCreate() {
@@ -303,6 +310,24 @@ public class MainController {
 
             @Override
             public void onFailure(Call<RecResponse> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void character_liste()
+    {
+        Call<ChaResponse> call = tov_api.getResultChar();
+        call.enqueue(new Callback<ChaResponse>() {
+            @Override
+            public void onResponse(Call<ChaResponse> call, Response<ChaResponse> response) {
+                ChaResponse chaResponse = response.body();
+                ArrayList<Character> characterslist = chaResponse.getCharacter_element();
+                view_perso.showchar(characterslist);
+            }
+
+            @Override
+            public void onFailure(Call<ChaResponse> call, Throwable t) {
                 Log.d("ERROR", "Api Error");
             }
         });

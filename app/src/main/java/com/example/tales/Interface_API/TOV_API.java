@@ -1,6 +1,7 @@
 package com.example.tales.Interface_API;
 
 import com.example.tales.Response.ArteResponse;
+import com.example.tales.Response.ChaResponse;
 import com.example.tales.Response.Equi2Response;
 import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
@@ -43,11 +44,11 @@ public interface TOV_API {
     @GET("recette.json")
     Call<RecResponse> getResultRecette();
 
-    /*//TODO character
-    @GET("Arme.json")
-    Call<EquiResponse> getResultArme();
+    //TODO character
+    @GET("Information_Character.json")
+    Call<ChaResponse> getResultChar();
 
-    //TODO WORLD
+    /*//TODO WORLD
     @GET("Arme.json")
     Call<EquiResponse> getResultArme();
 */

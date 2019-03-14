@@ -6,23 +6,22 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.tales.Objet.Recette;
-import com.example.tales.Objet.Skill_item;
+import com.example.tales.Objet.Character;
 import com.example.tales.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 
-public class MyAdapter6 extends RecyclerView.Adapter<MyAdapter6.ViewHolder>{
-    public ArrayList<Recette> recettelist;
+public class MyAdapter7 extends RecyclerView.Adapter<MyAdapter7.ViewHolder>{
+    public ArrayList<Character> characterlist;
 
-    public MyAdapter6(ArrayList<Recette> recettelist) {
-        this.recettelist = recettelist;
+    public MyAdapter7(ArrayList<Character> characterlist) {
+        this.characterlist = characterlist;
     }
 
     public int getItemCount() {
-        return recettelist.size();
+        return characterlist.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -50,7 +49,7 @@ public class MyAdapter6 extends RecyclerView.Adapter<MyAdapter6.ViewHolder>{
         }
     }
     @Override
-    public MyAdapter6.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyAdapter7.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.artesimple, parent, false);//a changer ici aussi
         ViewHolder enfin = new ViewHolder(view);
@@ -60,7 +59,7 @@ public class MyAdapter6 extends RecyclerView.Adapter<MyAdapter6.ViewHolder>{
     //@Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        Recette actual = recettelist.get(position);
+        Character actual = characterlist.get(position);
 
 
         String titre = actual.getName();
