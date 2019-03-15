@@ -5,9 +5,12 @@ import com.example.tales.Response.ChaResponse;
 import com.example.tales.Response.Equi2Response;
 import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
+import com.example.tales.Response.LocResponse;
 import com.example.tales.Response.RecResponse;
+import com.example.tales.Response.SPResponse;
 import com.example.tales.Response.SkillResponse;
 import com.example.tales.Response.SynResponse;
+import com.example.tales.Response.SynoResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -44,12 +47,17 @@ public interface TOV_API {
     @GET("recette.json")
     Call<RecResponse> getResultRecette();
 
-    //TODO character
+
     @GET("Information_Character.json")
     Call<ChaResponse> getResultChar();
 
-    /*//TODO WORLD
-    @GET("Arme.json")
-    Call<EquiResponse> getResultArme();
-*/
+    @GET("Search_Point.json")
+    Call<SPResponse> getResultSP();
+
+
+    @GET("location.json")
+    Call<LocResponse> getResultLocalisation();
+    @GET("synop.json")
+    Call<SynoResponse> getResultSynopsis();
+
 }

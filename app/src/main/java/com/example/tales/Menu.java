@@ -14,6 +14,7 @@ import com.example.tales.Menu_java.Menu1Item;
 import com.example.tales.Menu_java.Menu3Skill;
 import com.example.tales.Menu_java.Menu4Recette;
 import com.example.tales.Menu_java.Menu5Perso;
+import com.example.tales.Menu_java.Menu6World;
 
 
 public class Menu extends AppCompatActivity{
@@ -57,8 +58,8 @@ public class Menu extends AppCompatActivity{
 
     public void goToWorld (View view)
     {
-        /*Intent nameIntent = new Intent(this, Menu6World.class);
-        startActivity(nameIntent);*/
+        Intent nameIntent = new Intent(this, Menu6World.class);
+        startActivity(nameIntent);
     }
 
     public void goToCharacters (View view)

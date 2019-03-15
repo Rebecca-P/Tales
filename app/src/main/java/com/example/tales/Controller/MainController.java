@@ -11,6 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import com.example.tales.Menu_java.Menu1Arte;
 import com.example.tales.Menu_java.Menu1Conso;
 import com.example.tales.Menu_java.Menu1Equi;
+import com.example.tales.Menu_java.Menu1SP;
 import com.example.tales.Menu_java.Menu1Syn;
 import com.example.tales.Menu_java.Menu2Acce;
 import com.example.tales.Menu_java.Menu2Arme;
@@ -20,11 +21,16 @@ import com.example.tales.Menu_java.Menu2Second;
 import com.example.tales.Menu_java.Menu3Skill;
 import com.example.tales.Menu_java.Menu4Recette;
 import com.example.tales.Menu_java.Menu5Perso;
+import com.example.tales.Menu_java.Menu6Loca;
+import com.example.tales.Menu_java.Menu6Syno;
 import com.example.tales.Objet.Arte_Menu;
 import com.example.tales.Objet.Equipement_item;
 import com.example.tales.Objet.Item_Menu;
+import com.example.tales.Objet.Loca;
 import com.example.tales.Objet.Recette;
+import com.example.tales.Objet.SP_Menu;
 import com.example.tales.Objet.Skill_item;
+import com.example.tales.Objet.Synopsis;
 import com.example.tales.Objet.Synthese;
 import com.example.tales.Objet.Character;
 import com.example.tales.Response.ArteResponse;
@@ -32,10 +38,13 @@ import com.example.tales.Response.ChaResponse;
 import com.example.tales.Response.Equi2Response;
 import com.example.tales.Response.EquiResponse;
 import com.example.tales.Response.ItemResponse;
+import com.example.tales.Response.LocResponse;
 import com.example.tales.Response.RecResponse;
+import com.example.tales.Response.SPResponse;
 import com.example.tales.Response.SkillResponse;
 import com.example.tales.Response.SynResponse;
 import com.example.tales.R;
+import com.example.tales.Response.SynoResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -48,6 +57,8 @@ public class MainController {
     private Menu1Conso view_conso;
     private Menu1Arte view_Arte;
     private Menu1Syn view_Syn;
+    private Menu1SP view_sp;
+
     private Menu2Arme view_arme;
 
     private Menu2Second view_second;
@@ -61,8 +72,10 @@ public class MainController {
 
     private Menu4Recette view_recette;
     private Menu5Perso view_perso;
-    /*private Menu6Monde view_monde;
-    */
+    private Menu6Loca view_local;
+
+    private Menu6Syno view_syno;
+
 
     //
     private int i;
@@ -104,6 +117,17 @@ public class MainController {
     }
     public MainController(Menu5Perso view_perso) {
         this.view_perso = view_perso;
+    }
+    public MainController(Menu1SP view_sp) {
+        this.view_sp = view_sp;
+    }
+
+    public MainController(Menu6Loca view_local) {
+        this.view_local = view_local;
+    }
+
+    public MainController(Menu6Syno view_syno) {
+        this.view_syno = view_syno;
     }
 
     public void onCreate() {
@@ -328,6 +352,60 @@ public class MainController {
 
             @Override
             public void onFailure(Call<ChaResponse> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void sp_liste()
+    {
+        Call<SPResponse> call = tov_api.getResultSP();
+        call.enqueue(new Callback<SPResponse>() {
+            @Override
+            public void onResponse(Call<SPResponse> call, Response<SPResponse> response) {
+                SPResponse spResponse = response.body();
+                ArrayList<SP_Menu> splist = spResponse.getSp_element();
+                view_sp.showSP(splist);
+            }
+
+            @Override
+            public void onFailure(Call<SPResponse> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void location_liste()
+    {
+        Call<LocResponse> call = tov_api.getResultLocalisation();
+        call.enqueue(new Callback<LocResponse>() {
+            @Override
+            public void onResponse(Call<LocResponse> call, Response<LocResponse> response) {
+                LocResponse locResponse = response.body();
+                ArrayList<Loca> localist = locResponse.getLocation_element();
+                view_local.showlocal(localist);
+            }
+
+            @Override
+            public void onFailure(Call<LocResponse> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+            }
+        });
+    }
+
+    public void syno_liste()
+    {
+        Call<SynoResponse> call = tov_api.getResultSynopsis();
+        call.enqueue(new Callback<SynoResponse>() {
+            @Override
+            public void onResponse(Call<SynoResponse> call, Response<SynoResponse> response) {
+                SynoResponse synoResponse = response.body();
+                ArrayList<Synopsis> synolist = synoResponse.getSynopsis_element();
+                view_syno.showsyno(synolist);
+            }
+
+            @Override
+            public void onFailure(Call<SynoResponse> call, Throwable t) {
                 Log.d("ERROR", "Api Error");
             }
         });

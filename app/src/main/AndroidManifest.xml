@@ -60,6 +60,15 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Menu_java.Personnage"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu1SP"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu6World"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu6Loca"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu6Syno"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>
