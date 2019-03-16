@@ -45,12 +45,34 @@ public class Menu2Second extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sousmenu_second);
 
+        yur = findViewById(R.id.yuri);
+        est = findViewById(R.id.estelle);
+        rep = findViewById(R.id.repede);
+        kar = findViewById(R.id.karol);
+        jud = findViewById(R.id.judith);
+        rav = findViewById(R.id.raven);
+        fle = findViewById(R.id.flynn);
+        rit = findViewById(R.id.rita);
+        pat = findViewById(R.id.patty);
+
+        yur.setEnabled(false);
+        est.setEnabled(false);
+        rep.setEnabled(false);
+        kar.setEnabled(false);
+        jud.setEnabled(false);
+        rav.setEnabled(false);
+        fle.setEnabled(false);
+        rit.setEnabled(false);
+        pat.setEnabled(false);
+
         nameIntent = new Intent(this, Equipementdetail.class);
         rv_menu = (RecyclerView) findViewById(R.id.par_perso);
 
         controller = new MainController(this);
         controller.onCreate();
         controller.second_liste();
+
+
     }
 
     public void showYuri(View view)
@@ -222,12 +244,20 @@ public class Menu2Second extends AppCompatActivity{
         rv_menu.setAdapter(rv_adapter);
         rv_menu.invalidate();
 
+        yur.setEnabled(true);
+        est.setEnabled(true);
+        rep.setEnabled(true);
+        kar.setEnabled(true);
+        jud.setEnabled(true);
+        rav.setEnabled(true);
+        fle.setEnabled(true);
+        rit.setEnabled(true);
+        pat.setEnabled(true);
 
         rv_menu.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rv_menu, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-               /* ArrayList<Equipement_item> temp = all_equi.get(number_view);
-                Equipement_item equipement= temp.get(position);*/
+
                 Equipement_item equipement= perso.get(position);
 
                 nameIntent.putExtra("url_img", equipement.getUrl_img());

@@ -15,6 +15,7 @@ import com.example.tales.Menu_java.Menu3Skill;
 import com.example.tales.Menu_java.Menu4Recette;
 import com.example.tales.Menu_java.Menu5Perso;
 import com.example.tales.Menu_java.Menu6World;
+import com.example.tales.Menu_java.Menu7Recherche;
 
 
 public class Menu extends AppCompatActivity{
@@ -25,11 +26,6 @@ public class Menu extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
 
-        /*
-        RecyclerView rv_menu = (RecyclerView) findViewById(R.id.menu_list);
-        rv_menu.setLayoutManager(new LinearLayoutManager(this));
-        rv_menu.setAdapter(new MyAdapter1());
-        */
     }
 
     public void goToItem (View view)
@@ -71,6 +67,12 @@ public class Menu extends AppCompatActivity{
     public void goToRecipe (View view)
     {
         Intent nameIntent = new Intent(this, Menu4Recette.class);
+        startActivity(nameIntent);
+    }
+
+    public void goToRecherche (View view)
+    {
+        Intent nameIntent = new Intent(this, Menu7Recherche.class);
         startActivity(nameIntent);
     }
 

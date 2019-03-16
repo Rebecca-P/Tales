@@ -31,7 +31,7 @@ public class Menu6Loca extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sousmenu);
 
-        nameIntent = new Intent(this, Recette_Layout.class);
+        //nameIntent = new Intent(this, Recette_Layout.class);
         rv_menu = (RecyclerView) findViewById(R.id.thingslist);
         titre = (TextView) findViewById(R.id.Titlething);
         this.titre.setText("Localisation");

@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#8F6C5F</color>
     <color name="fond_item">#9E2727</color>
-    <color name="colorPrimaryDark">#185542</color>
+    <color name="colorPrimaryDark">#182255</color>
     <color name="colorAccent">#00D81B60</color>
     <color name="fond">#42252A</color>
     <color name="police">#FCD179</color>

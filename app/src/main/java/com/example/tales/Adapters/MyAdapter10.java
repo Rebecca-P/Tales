@@ -72,7 +72,7 @@ public class MyAdapter10 extends RecyclerView.Adapter<MyAdapter10.ViewHolder>{
 
         //image
         Picasso.get().load(actual.getImage())
-                .resize(100,100)
+
                 .into(holder.image);
 
 

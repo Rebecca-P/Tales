@@ -70,10 +70,9 @@ public class MyAdapter9 extends RecyclerView.Adapter<MyAdapter9.ViewHolder>{
 
 
         //image
-        Picasso.get().load(actual.getImage())
-                .resize(100,100)
-                .into(holder.image);
-
+        if (!actual.getImage().isEmpty())
+            Picasso.get().load(actual.getImage()).into(holder.image);
+        else  Picasso.get().load("http://www.thelockinmovie.com/wp-content/uploads/2018/09/red-x-clipart-red-x-clipart-x-marks-the-spot-2-clip-art-at-clker-vector-clip-art-clipart-download-wallpaper.png").into(holder.image);
 
         //texte
         holder.titre.setText(actual.getLieu());

@@ -29,7 +29,7 @@ public class Menu6World extends AppCompatActivity {
 
     public void goToOp (View view)
     {
-        Intent nameIntent = new Intent(this, Menu1SP.class);
+        Intent nameIntent = new Intent(this, Opening.class);
         startActivity(nameIntent);
     }
 }
