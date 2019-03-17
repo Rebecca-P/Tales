@@ -40,7 +40,7 @@ public class Menu7Recherche extends AppCompatActivity {
     private RechercheController controller;
 
     private String aTrouver;
-    private  ArrayList resultat_finaux;
+    private ArrayList resultat_finaux;
     private EditText users;
     private ConstraintLayout en_cours;
     private ConstraintLayout pas_trouve;
@@ -59,34 +59,12 @@ public class Menu7Recherche extends AppCompatActivity {
         users = (EditText) findViewById(R.id.need);
         recherche = (Button) findViewById(R.id.button_find) ;
 
-        recherche.setEnabled(false);
+        //recherche.setEnabled(false);
 
         rv_menu.setVisibility(View.GONE);
         pas_trouve.setVisibility(View.GONE);
 
         controller = new RechercheController(this);
-        users.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.toString().length()>= 3)
-                {
-                    recherche.setEnabled(true);
-                    aTrouver=s.toString();
-
-
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
         controller.onCreate();
 
     }
@@ -95,26 +73,29 @@ public class Menu7Recherche extends AppCompatActivity {
     {
 
         rv_menu.setVisibility(View.VISIBLE);
-        en_cours.setVisibility(View.INVISIBLE);
-        pas_trouve.setVisibility(View.INVISIBLE);
+        en_cours.setVisibility(View.GONE);
+        pas_trouve.setVisibility(View.GONE);
 
-        controller.setUsers(aTrouver);
-        compteur ++;
+        aTrouver=users.getText().toString();
 
-
-
-
-    }
-
-
-    public void showfind(ArrayList resultat) {
-
-        Log.wtf("Avant", "il y a"+resultat.size());
-
-
-        if (compteur>1){
+        if (compteur>1)
+        {
             resultat_finaux.clear();
-            resultat_finaux=new ArrayList(resultat);
+            Log.wtf("aaaaaaaaa", " CLEAR!!!!!!!");
+
+        }
+        if (aTrouver.length()>2)
+        {
+            controller.setUsers(aTrouver);
+            compteur ++;
+            changement();
+
+        }
+    }
+    public void changement()
+    {
+        if (compteur>1)
+        {
 
             rv_adapter = new RechercheAdapter(resultat_finaux);
             rv_adapter.notifyDataSetChanged();
@@ -122,33 +103,33 @@ public class Menu7Recherche extends AppCompatActivity {
             rv_menu.invalidate();
             rv_menu.removeAllViews();
 
-        }else resultat_finaux=resultat;
-        Log.wtf("Apres", "il y a"+resultat.size());
-        Log.wtf("Apres", "il y a"+resultat_finaux.size());
-        Log.wtf("Apres", "commpteur"+compteur);
+        }
+    }
+
+
+
+
+    public void showfind(ArrayList recuperation) {
+
+        resultat_finaux=(ArrayList) recuperation.clone();
+        rv_adapter = new RechercheAdapter(resultat_finaux);
+
+
         rv_menu.setHasFixedSize(true);
         rv_layout = new LinearLayoutManager(this);
         rv_menu.setLayoutManager(rv_layout);
 
-        if (resultat.size()>0){
+        rv_menu.setAdapter(rv_adapter);
+        //rv_adapter.notifyDataSetChanged();
 
-            /*rv_menu.setVisibility(View.VISIBLE);
-            en_cours.setVisibility(View.GONE);
-            pas_trouve.setVisibility(View.GONE);*/
+            /*if (compteur>1){
 
 
-            rv_adapter = new RechercheAdapter(resultat_finaux);
-
-            rv_adapter.notifyDataSetChanged();
-            rv_menu.setAdapter(rv_adapter);
-            if (compteur>1){
-
-                //rv_adapter = new RechercheAdapter(resultat_finaux);
                 rv_adapter.notifyDataSetChanged();
                 rv_menu.setAdapter(rv_adapter);
                 rv_menu.invalidate();
                 rv_menu.removeAllViews();
-            }
+            }*/
 
 
 
@@ -157,15 +138,16 @@ public class Menu7Recherche extends AppCompatActivity {
                 public void onClick(View view, int position) {
 
                     Object actual = resultat_finaux.get(position);
+                    Intent nameIntent = new Intent(getApplicationContext(), Personnage.class);
 
-                    if (actual instanceof Item_Menu)
+                    /*if (actual instanceof Item_Menu)
                     {
                         //Intent nameIntent = new Intent(getApplicationContext(), Artedetail.class);
 
 
-                    }else if (actual instanceof Arte_Menu)
+                    }else*/ if (actual instanceof Arte_Menu)
                     {
-                        Intent nameIntent = new Intent(getApplicationContext(), Artedetail.class);
+                        nameIntent = new Intent(getApplicationContext(), Artedetail.class);
 
                         Arte_Menu arte_menu= (Arte_Menu) actual;
 
@@ -179,7 +161,7 @@ public class Menu7Recherche extends AppCompatActivity {
                         nameIntent.putExtra("alter", arte_menu.getAlter());
                         nameIntent.putExtra("capacite", arte_menu.getCapacite());
 
-                        startActivity(nameIntent);
+                        //startActivity(nameIntent);
                         /*if (resultat_finaux!=null)
                         {
                             resultat_finaux.clear();
@@ -187,7 +169,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     }else if (actual instanceof Synthese)
                     {
-                        Intent nameIntent = new Intent(getApplicationContext(), Syndetail.class);
+                        nameIntent = new Intent(getApplicationContext(), Syndetail.class);
                         Synthese synthese_item= (Synthese) actual;
 
 
@@ -199,7 +181,7 @@ public class Menu7Recherche extends AppCompatActivity {
                         nameIntent.putExtra("Search_Points", synthese_item.getSp());
 
 
-                        startActivity(nameIntent);
+                        //startActivity(nameIntent);
                         /*if (resultat_finaux!=null)
                         {
                             resultat_finaux.clear();
@@ -207,7 +189,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     }else if (actual instanceof Equipement_item)
                     {
-                        Intent nameIntent = new Intent(getApplicationContext(), Equipementdetail.class);
+                        nameIntent = new Intent(getApplicationContext(), Equipementdetail.class);
                         Equipement_item equipement= (Equipement_item) actual;
 
                         nameIntent.putExtra("url_img", equipement.getUrl_img());
@@ -220,7 +202,7 @@ public class Menu7Recherche extends AppCompatActivity {
                         nameIntent.putExtra("Synthese1", equipement.getSyn1());
                         nameIntent.putExtra("Synthese2", equipement.getSyn2());
 
-                        startActivity(nameIntent);
+                        //startActivity(nameIntent);
                         /*if (resultat_finaux!=null)
                         {
                             resultat_finaux.clear();
@@ -229,7 +211,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     }else if (actual instanceof Skill_item)
                     {
-                        Intent nameIntent = new Intent(getApplicationContext(), Skilldetail.class);
+                        nameIntent = new Intent(getApplicationContext(), Skilldetail.class);
                         Skill_item skill_menu= (Skill_item) actual;
 
 
@@ -240,7 +222,7 @@ public class Menu7Recherche extends AppCompatActivity {
                         nameIntent.putExtra("perso", skill_menu.getPerso());
 
 
-                        startActivity(nameIntent);
+                        //startActivity(nameIntent);
                         /*if (resultat_finaux!=null)
                         {
                             resultat_finaux.clear();
@@ -248,7 +230,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     }else if (actual instanceof Recette)
                     {
-                        Intent nameIntent = new Intent(getApplicationContext(), Recette_Layout.class);
+                         nameIntent = new Intent(getApplicationContext(), Recette_Layout.class);
                         Recette recette_item= (Recette) actual;
 
 
@@ -264,7 +246,7 @@ public class Menu7Recherche extends AppCompatActivity {
                         nameIntent.putExtra("Good", recette_item.getGood());
                         nameIntent.putExtra("Bad", recette_item.getBad());
 
-                        startActivity(nameIntent);
+                        //startActivity(nameIntent);
                         /*if (resultat_finaux!=null)
                         {
                             resultat_finaux.clear();
@@ -272,7 +254,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     }else if (actual instanceof Character)
                     {
-                        Intent nameIntent = new Intent(getApplicationContext(), Personnage.class);
+                        nameIntent = new Intent(getApplicationContext(), Personnage.class);
                         Character perso= (Character) actual;
 
                         nameIntent.putExtra("Name", perso.getName());
@@ -285,18 +267,18 @@ public class Menu7Recherche extends AppCompatActivity {
                         nameIntent.putExtra("Arme", perso.getWeapon());
 
 
-                        startActivity(nameIntent);
+
                         /*if (resultat_finaux!=null)
                         {
                             resultat_finaux.clear();
                         }*/
 
-                    }else if (actual instanceof Loca)
+                    }/*else if (actual instanceof Loca)
                     {
                         //Intent nameIntent = new Intent(getApplicationContext(), Equipementdetail.class);
 
-                    }
-
+                    }*/
+                    startActivity(nameIntent);
 
 
 
@@ -309,12 +291,16 @@ public class Menu7Recherche extends AppCompatActivity {
             }));
 
 
+        if (resultat_finaux.size()!=0){
+            rv_menu.setVisibility(View.VISIBLE);
+            en_cours.setVisibility(View.GONE);
+            pas_trouve.setVisibility(View.GONE);
 
-        }/*else {
+        }else {
             rv_menu.setVisibility(View.GONE);
             en_cours.setVisibility(View.GONE);
             pas_trouve.setVisibility(View.VISIBLE);
-        }*/
+        }
 
     }
 }

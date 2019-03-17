@@ -390,7 +390,9 @@ public class RechercheController {
                 ChaResponse chaResponse = response.body();
                 ArrayList<Character> characterslist = chaResponse.getCharacter_element();
                 //TODO a comparer avec la recherche de l'utilisateur
+                Log.wtf("aaaaaaaaa", "On passe ici");
                 for (Character actual: characterslist ) {
+
                     if (actual.getName().toLowerCase().contains(users))
                     {
                         resultat.add(actual);
@@ -418,6 +420,7 @@ public class RechercheController {
                 LocResponse locResponse = response.body();
                 ArrayList<Loca> localist = locResponse.getLocation_element();
                 //TODO a comparer avec la recherche de l'utilisateur
+                Log.wtf("aaaaaaaaa", "On passe aussi ici");
                 for (Loca actual: localist ) {
                     if (actual.getLieu().toLowerCase().contains(users))
                     {
@@ -425,8 +428,10 @@ public class RechercheController {
 
                     }
                 }
-
+                Log.wtf("aaaaaaaaa", " taille:"+resultat.size());
                 recherche.showfind(resultat);
+                resultat.clear();
+
             }
 
             @Override
@@ -434,6 +439,8 @@ public class RechercheController {
                 Log.d("ERROR", "Api Error");
             }
         });
+
+
     }
 
 
