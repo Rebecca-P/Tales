@@ -7,38 +7,57 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/zone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/need"
-            android:layout_width="293dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/police"
+            android:background="@color/fond"
             android:ems="10"
             android:inputType="textPersonName"
             android:singleLine="true"
             android:text="Là"
             android:textAlignment="center"
-            android:textColor="@color/fond" />
-
-        <Button
-            android:id="@+id/button_find"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/g4540"
-            android:onClick="enRecherche"
-            android:text="Rechercher"
             android:textColor="@color/police" />
+
+        <!--<Button
+             android:id="@+id/button_find"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:background="@drawable/g4540"
+             android:onClick="enRecherche"
+             android:text="Rechercher"
+             android:textColor="@color/police" />-->
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/Patiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fond"
+        android:fontFamily="@font/belgrano"
+        android:text="Veuillez patiente"
+        android:textAlignment="center"
+        android:textColor="@color/police"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menuunder"
+        android:background="@color/fond" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recherche_liste"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/police" />
+        android:background="@color/fond" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/pas"
