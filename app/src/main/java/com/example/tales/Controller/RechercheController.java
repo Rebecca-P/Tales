@@ -87,11 +87,8 @@ public class RechercheController {
 
     }
 
-    public void setUsers(String user) {
-        String temp = user.toLowerCase();
-        users = temp;
+    public void recupDonne() {
 
-        Log.wtf("aaaaaaaaa", users);
         item_liste();
         arte_liste();
         syn_liste();
@@ -119,12 +116,12 @@ public class RechercheController {
                 ArrayList<Item_Menu> itemlist = itemResponse.getItem_element();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Item_Menu actual: itemlist ) {
-                        if (actual.getName_item().toLowerCase().contains(users))
-                        {
+                        //if (actual.getName_item().toLowerCase().contains(users))
+                        //{
                             resultat.add(actual);
 
 
-                        }
+                        //}
                 }
             }
 
@@ -145,12 +142,12 @@ public class RechercheController {
                 ArrayList<Arte_Menu> artelist = arteResponse.getArte_element();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Arte_Menu actual: artelist ) {
-                    if (actual.getName_item().toLowerCase().contains(users))
-                    {
+                    //if (actual.getName_item().toLowerCase().contains(users))
+                    //{
                         resultat.add(actual);
-                        Log.wtf("aaaaaaaaa", actual.getName_item());
+                        //Log.wtf("aaaaaaaaa", actual.getName_item());
 
-                    }
+                    //}
                 }
             }
 
@@ -171,12 +168,12 @@ public class RechercheController {
                 ArrayList<Synthese> synlist = synResponse.getSynthese_element();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Synthese actual: synlist ) {
-                    if (actual.getName().toLowerCase().contains(users))
-                    {
+                   // if (actual.getName().toLowerCase().contains(users))
+                   // {
                         resultat.add(actual);
-                        Log.wtf("aaaaaaaaa", actual.getName());
 
-                    }
+
+                  //  }
                 }
             }
 
@@ -212,12 +209,12 @@ public class RechercheController {
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (ArrayList<Equipement_item> liste: all_equi ) {
                     for (Equipement_item actual:liste ) {
-                        if (actual.getName_equ().toLowerCase().contains(users))
-                        {
+                        //if (actual.getName_equ().toLowerCase().contains(users))
+                        //{
                             resultat.add(actual);
                             Log.wtf("aaaaaaaaa", actual.getName_equ());
 
-                        }
+                        //}
                     }
 
                 }
@@ -241,11 +238,11 @@ public class RechercheController {
                 ArrayList<Equipement_item> secondlist = secondResponse.getSecond();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Equipement_item actual: secondlist ) {
-                    if (actual.getName_equ().toLowerCase().contains(users))
-                    {
+                   // if (actual.getName_equ().toLowerCase().contains(users))
+                    //{
                         resultat.add(actual);
 
-                    }
+                    //}
                 }
             }
 
@@ -266,11 +263,11 @@ public class RechercheController {
                 ArrayList<Equipement_item> headlist = headResponse.getHead();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Equipement_item actual: headlist ) {
-                    if (actual.getName_equ().toLowerCase().contains(users))
-                    {
+                   // if (actual.getName_equ().toLowerCase().contains(users))
+                   // {
                         resultat.add(actual);
 
-                    }
+                   // }
                 }
             }
 
@@ -291,11 +288,11 @@ public class RechercheController {
                 ArrayList<Equipement_item> bodylist = bodyResponse.getBody();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Equipement_item actual: bodylist ) {
-                    if (actual.getName_equ().toLowerCase().contains(users))
-                    {
+                  //  if (actual.getName_equ().toLowerCase().contains(users))
+                  //  {
                         resultat.add(actual);
 
-                    }
+                   // }
                 }
             }
 
@@ -316,11 +313,11 @@ public class RechercheController {
                 ArrayList<Equipement_item> accelist = acceResponse.getAcce();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Equipement_item actual: accelist ) {
-                    if (actual.getName_equ().toLowerCase().contains(users))
-                    {
+                    //if (actual.getName_equ().toLowerCase().contains(users))
+                    //{
                         resultat.add(actual);
 
-                    }
+                    //}
                 }
             }
 
@@ -341,11 +338,11 @@ public class RechercheController {
                 ArrayList<Skill_item> skilllist = skillResponse.getSkill_element();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Skill_item actual: skilllist ) {
-                    if (actual.getName().toLowerCase().contains(users))
-                    {
+                   // if (actual.getName().toLowerCase().contains(users))
+                   // {
                         resultat.add(actual);
 
-                    }
+                  //  }
                 }
             }
 
@@ -366,11 +363,11 @@ public class RechercheController {
                 ArrayList<Recette> recettelist = recResponse.getRecette_element();
                 //TODO a comparer avec la recherche de l'utilisateur
                 for (Recette actual: recettelist ) {
-                    if (actual.getName().toLowerCase().contains(users))
-                    {
+                  //  if (actual.getName().toLowerCase().contains(users))
+                   // {
                         resultat.add(actual);
 
-                    }
+                    //}
                 }
             }
 
@@ -390,15 +387,15 @@ public class RechercheController {
                 ChaResponse chaResponse = response.body();
                 ArrayList<Character> characterslist = chaResponse.getCharacter_element();
                 //TODO a comparer avec la recherche de l'utilisateur
-                Log.wtf("aaaaaaaaa", "On passe ici");
+
                 for (Character actual: characterslist ) {
 
-                    if (actual.getName().toLowerCase().contains(users))
-                    {
+                   // if (actual.getName().toLowerCase().contains(users))
+                   // {
                         resultat.add(actual);
-                        Log.wtf("aaaaaaaaa", actual.getName().toLowerCase());
 
-                    }
+
+                   // }
                 }
             }
 
@@ -422,15 +419,19 @@ public class RechercheController {
                 //TODO a comparer avec la recherche de l'utilisateur
                 Log.wtf("aaaaaaaaa", "On passe aussi ici");
                 for (Loca actual: localist ) {
-                    if (actual.getLieu().toLowerCase().contains(users))
-                    {
+                    //if (actual.getLieu().toLowerCase().contains(users))
+                    //{
                         resultat.add(actual);
 
-                    }
+                   // }
                 }
                 Log.wtf("aaaaaaaaa", " taille:"+resultat.size());
+                Log.wtf("aaaaaaaaa", "FINIIIIIIIII");
                 recherche.showfind(resultat);
-                resultat.clear();
+
+                //resultat.clear();
+                //return;
+
 
             }
 
@@ -442,6 +443,8 @@ public class RechercheController {
 
 
     }
+
+
 
 
 }

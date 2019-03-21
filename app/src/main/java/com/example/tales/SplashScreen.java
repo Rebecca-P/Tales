@@ -14,6 +14,7 @@ import com.example.tales.Menu_java.Menu2Arme;
 import com.example.tales.Menu_java.Menu2Body;
 import com.example.tales.Menu_java.Menu2Head;
 import com.example.tales.Menu_java.Menu2Second;
+import com.example.tales.Menu_java.Menu7Recherche;
 
 public class SplashScreen extends AppCompatActivity{
 
@@ -44,6 +45,10 @@ public class SplashScreen extends AppCompatActivity{
                         break;
                     case 5:
                         i= new Intent(SplashScreen.this, Menu2Acce.class);
+                        break;
+                    case 6:
+                        i= new Intent(SplashScreen.this, Menu7Recherche.class);
+                        SPLASH_TIME_OUT = 15000;
                         break;
 
                         default:

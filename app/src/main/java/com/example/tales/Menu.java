@@ -72,7 +72,9 @@ public class Menu extends AppCompatActivity{
 
     public void goToRecherche (View view)
     {
-        Intent nameIntent = new Intent(this, Menu7Recherche.class);
+        //Intent nameIntent = new Intent(this, Menu7Recherche.class);
+        Intent nameIntent = new Intent(this, SplashScreen.class);
+        nameIntent.putExtra("choix", 6);
         startActivity(nameIntent);
     }
 
