@@ -48,7 +48,7 @@ public class Menu7Recherche extends AppCompatActivity {
     private EditText users;
     private ConstraintLayout en_cours;
     private ConstraintLayout pas_trouve;
-    private Button recherche;
+    private Button dernier;
     private TextView waiter;
     private  int compteur;
     private boolean uneRecherche;
@@ -64,7 +64,7 @@ public class Menu7Recherche extends AppCompatActivity {
         pas_trouve= (ConstraintLayout) findViewById(R.id.pas) ;
         users = (EditText) findViewById(R.id.need);
         waiter = (TextView) findViewById(R.id.Patiente);
-        //recherche = (Button) findViewById(R.id.button_find) ;
+        dernier = (Button) findViewById(R.id.dernier) ;
 
         users.setVisibility(View.GONE);
         waiter.setVisibility(View.VISIBLE);
@@ -204,6 +204,11 @@ public class Menu7Recherche extends AppCompatActivity {
 
     }
 
+    public void mise_en_cache()
+    {
+
+    }
+
     public void recuperons()
     {
         users.addTextChangedListener(new TextWatcher() {
@@ -233,20 +238,30 @@ public class Menu7Recherche extends AppCompatActivity {
                 {
                     resultat_demande.clear();
                 }
-                if (aTrouver!=null)
-                    if (aTrouver.length()>2  )
-                    {
+                if (aTrouver!=null) {
+                    if (aTrouver.length() > 2) {
                         rv_menu.setVisibility(View.GONE);
                         en_cours.setVisibility(View.VISIBLE);
                         pas_trouve.setVisibility(View.GONE);
 
-                        //compteur ++;
-                        uneRecherche=true;
+
+                        uneRecherche = true;
                         changement();
                         chargementDonne();
 
 
+                    }else{
+                        rv_menu.setVisibility(View.GONE);
+                        en_cours.setVisibility(View.VISIBLE);
+                        pas_trouve.setVisibility(View.GONE);
                     }
+                }
+                if (aTrouver.length()==0)
+                {
+                    rv_menu.setVisibility(View.GONE);
+                    en_cours.setVisibility(View.VISIBLE);
+                    pas_trouve.setVisibility(View.GONE);
+                }
 
             }
 
@@ -353,7 +368,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
 
 
-        if (resultat_demande.size()!=0 || resultat_demande!=null){
+        if (resultat_demande.size()!=0 && resultat_demande!=null){
             rv_menu.setVisibility(View.VISIBLE);
             en_cours.setVisibility(View.GONE);
             pas_trouve.setVisibility(View.GONE);

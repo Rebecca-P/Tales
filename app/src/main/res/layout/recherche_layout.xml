@@ -4,47 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fond"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/zone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/fond"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/need"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
             android:background="@color/fond"
             android:ems="10"
             android:inputType="textPersonName"
             android:singleLine="true"
             android:text="Là"
             android:textAlignment="center"
-            android:textColor="@color/police" />
+            android:textColor="@color/police"
+            android:textSize="24sp" />
 
-        <!--<Button
-             android:id="@+id/button_find"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:background="@drawable/g4540"
-             android:onClick="enRecherche"
-             android:text="Rechercher"
-             android:textColor="@color/police" />-->
     </LinearLayout>
 
     <TextView
         android:id="@+id/Patiente"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/fond"
         android:fontFamily="@font/belgrano"
-        android:text="Veuillez patiente"
+        android:text="Veuillez patienter"
         android:textAlignment="center"
         android:textColor="@color/police"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/dernier"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/fond_mini"
+        android:fontFamily="@font/belgrano"
+        android:text="Derniere Recherche"
+        android:textAlignment="center"
+        android:textColor="@color/police" />
 
     <ImageView
         android:id="@+id/imageView7"

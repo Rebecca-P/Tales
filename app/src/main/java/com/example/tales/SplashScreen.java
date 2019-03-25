@@ -48,7 +48,7 @@ public class SplashScreen extends AppCompatActivity{
                         break;
                     case 6:
                         i= new Intent(SplashScreen.this, Menu7Recherche.class);
-                        SPLASH_TIME_OUT = 15000;
+
                         break;
 
                         default:
