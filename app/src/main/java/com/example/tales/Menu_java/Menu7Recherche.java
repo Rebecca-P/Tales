@@ -97,6 +97,7 @@ public class Menu7Recherche extends AppCompatActivity {
                     nameIntent.putExtra("url_img", arte_menu.getUrl_img());
                     nameIntent.putExtra("type", arte_menu.getType());
                     nameIntent.putExtra("name_item", arte_menu.getName_item());
+                    mise_en_cache(arte_menu.getName_item());
                     nameIntent.putExtra("description_item", arte_menu.getDescription_item());
                     nameIntent.putExtra("detail", arte_menu.getDetail());
                     nameIntent.putExtra("tp_level", arte_menu.getTp_level());
@@ -113,6 +114,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     nameIntent.putExtra("Icon", synthese_item.getIcon());
                     nameIntent.putExtra("Name", synthese_item.getName());
+                    mise_en_cache(synthese_item.getName());
                     nameIntent.putExtra("Description", synthese_item.getDescription());
                     nameIntent.putExtra("Dropped", synthese_item.getDropped());
                     nameIntent.putExtra("Stolen", synthese_item.getStolen());
@@ -128,6 +130,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     nameIntent.putExtra("url_img", equipement.getUrl_img());
                     nameIntent.putExtra("Nom", equipement.getName_equ());
+                    mise_en_cache(equipement.getName_equ());
                     nameIntent.putExtra("Description", equipement.getDescription_equ());
                     nameIntent.putExtra("Personnage", equipement.getUrl_perso());
                     nameIntent.putExtra("Capacite", equipement.getCapacite());
@@ -148,6 +151,7 @@ public class Menu7Recherche extends AppCompatActivity {
                     nameIntent.putExtra("icon", skill_menu.getIcon());
                     nameIntent.putExtra("info", skill_menu.getInfo());
                     nameIntent.putExtra("name", skill_menu.getName());
+                    mise_en_cache(skill_menu.getName());
                     nameIntent.putExtra("description", skill_menu.getDescription());
                     nameIntent.putExtra("perso", skill_menu.getPerso());
 
@@ -162,6 +166,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     nameIntent.putExtra("Icon", recette_item.getIcon());
                     nameIntent.putExtra("Name", recette_item.getName());
+                    mise_en_cache(recette_item.getName());
                     nameIntent.putExtra("Description", recette_item.getDescription());
                     nameIntent.putExtra("Ingredient", recette_item.getIngredient());
                     nameIntent.putExtra("Effet", recette_item.getEffet());
@@ -181,6 +186,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
                     nameIntent.putExtra("Name", perso.getName());
                     nameIntent.putExtra("Image", perso.getImage());
+                    mise_en_cache(perso.getName());
                     nameIntent.putExtra("Age", perso.getAge());
                     nameIntent.putExtra("Home", perso.getHome());
                     nameIntent.putExtra("Occup", perso.getOccup());
