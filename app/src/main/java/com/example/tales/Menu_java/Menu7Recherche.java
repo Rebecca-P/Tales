@@ -1,7 +1,9 @@
 package com.example.tales.Menu_java;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -68,7 +70,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
         users.setVisibility(View.GONE);
         waiter.setVisibility(View.VISIBLE);
-       // recherche.setEnabled(false);
+        dernier.setEnabled(false);
 
         rv_menu.setVisibility(View.GONE);
         pas_trouve.setVisibility(View.GONE);
@@ -204,10 +206,25 @@ public class Menu7Recherche extends AppCompatActivity {
 
     }
 
-    public void mise_en_cache()
+    public void mise_en_cache(String nom)
     {
+        SharedPreferences.Editor save_data= PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+        save_data.putString("last_save", nom);
+        save_data.apply();
+    }
+
+    public void recup_cache(View view)
+    {
+        SharedPreferences recup = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        aTrouver = recup.getString("last_save", "yuri");
+        String temp=aTrouver.toLowerCase();
+        aTrouver=temp;
+        changement();
+        chargementDonne();
 
     }
+
+
 
     public void recuperons()
     {
@@ -344,6 +361,7 @@ public class Menu7Recherche extends AppCompatActivity {
         //recuperons();
         users.setVisibility(View.VISIBLE);
         waiter.setVisibility(View.GONE);
+        dernier.setEnabled(true);
 
     }
 

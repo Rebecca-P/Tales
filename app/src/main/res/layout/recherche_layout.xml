@@ -49,6 +49,7 @@
         android:fontFamily="@font/belgrano"
         android:text="Derniere Recherche"
         android:textAlignment="center"
+        android:onClick="recup_cache"
         android:textColor="@color/police" />
 
     <ImageView
