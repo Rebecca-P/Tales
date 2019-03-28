@@ -404,13 +404,4 @@ public class Menu7Recherche extends AppCompatActivity {
         }
     }
 }
-//Todo
-/*
-* Ajouter un bouton permettant de voir les 10 derniere recherche
-* faire une seul et recuperer les donnée dans ce fichier et non l'autre
-* recuperer la liste seulement apres traitement
-* etape a suivre
-* 1.recuperer toute la liste et la mettre dans CE fichier
-* puis en fonction de ce que l'user veut faire la meme chose mais seulement ici
-*
-* */
+
