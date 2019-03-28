@@ -7,30 +7,7 @@
     android:orientation="vertical"
     android:background="@color/fond">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="87dp"
-            android:layout_height="75dp"
-            app:srcCompat="@drawable/loupe" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:fontFamily="@font/belgrano"
-            android:inputType="textPersonName"
-            android:text="RECHERCHE"
-            android:textAlignment="center"
-            android:textColor="@color/police" />
-
-    </LinearLayout>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

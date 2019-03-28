@@ -4,29 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bd_tov"
+
     tools:context=".MainActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ver2" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
         android:background="@color/colorAccent"
         android:fontFamily="@font/belgrano"
         android:lineSpacingExtra="12sp"
         android:onClick="goToMenu"
-        android:text="\n\n\n\n\n\n\n\n\n\n\n\nAppuyer!"
         android:textAlignment="center"
-        android:textColor="@color/police"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

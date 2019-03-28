@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,6 +52,9 @@ public class Personnage extends AppCompatActivity{
         race.setText(recupintent.getStringExtra("Race"));
         occup.setText(recupintent.getStringExtra("Occup"));
         arme.setText(recupintent.getStringExtra("Arme"));
+
+
     }
+
 
 }

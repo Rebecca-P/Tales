@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fond"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fond"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/need"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/fond"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:text="Là"
+            android:textAlignment="center"
+            android:textColor="@color/police"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Patiente"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/fond"
+        android:fontFamily="@font/belgrano"
+        android:text="Veuillez patienter"
+        android:textAlignment="center"
+        android:textColor="@color/police"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/dernier"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/fond_mini"
+        android:fontFamily="@font/belgrano"
+        android:text="Derniere Recherche"
+        android:textAlignment="center"
+        android:onClick="recup_cache"
+        android:textColor="@color/police" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menuunder"
+        android:background="@color/fond" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recherche_liste"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fond" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/pas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/police">
+
+        <TextView
+            android:id="@+id/Charg"
+            android:layout_width="230dp"
+            android:layout_height="137dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="casual"
+            android:text="Nous avons rien trouvé!"
+            android:textAlignment="center"
+            android:textColor="@color/fond"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Charg"
+            app:srcCompat="@drawable/nope" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cherchons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/police">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView2"
+            android:layout_width="145dp"
+            android:layout_height="266dp"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/wait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:layout_width="230dp"
+            android:layout_height="137dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="casual"
+            android:text="Nous Cherchons!"
+            android:textAlignment="center"
+            android:textColor="@color/fond"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

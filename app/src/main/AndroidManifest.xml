@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tales">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <permission android:name="android.permission.INTERNET"></permission>
+    <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/iconcarre"
@@ -12,7 +13,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -67,6 +68,13 @@
         <activity android:name=".Menu_java.Menu6Loca"
             android:screenOrientation="portrait"/>
         <activity android:name=".Menu_java.Menu6Syno"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Opening"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Menu_java.Menu7Recherche"
             android:screenOrientation="portrait"/>
 
     </application>

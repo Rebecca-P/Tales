@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "393450610901",
+    "firebase_url": "https://tales-of-vesperia.firebaseio.com",
+    "project_id": "tales-of-vesperia",
+    "storage_bucket": "tales-of-vesperia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393450610901:android:588cfb4c6bdd875e",
+        "android_client_info": {
+          "package_name": "com.example.tales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393450610901-hfgftpddphqp5ibfb6uitfrii9u5gqir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCClLtIREXZp9Cn0JpURZFhqg75qA7In50"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
