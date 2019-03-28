@@ -56,7 +56,7 @@
         android:id="@+id/imageView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/menuunder"
+        android:src="@drawable/menuunder"
         android:background="@color/fond" />
 
     <android.support.v7.widget.RecyclerView

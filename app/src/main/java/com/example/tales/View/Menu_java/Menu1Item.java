@@ -1,0 +1,36 @@
+package com.example.tales.View.Menu_java;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+import com.example.tales.R;
+
+
+public class Menu1Item extends AppCompatActivity{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.sousmenuconso);
+
+    }
+
+    public void goToConso (View view)
+    {
+        Intent nameIntent = new Intent(this, Menu1Conso.class);
+        startActivity(nameIntent);
+    }
+
+    public void goToSynt (View view)
+    {
+        Intent nameIntent = new Intent(this, Menu1Syn.class);
+        startActivity(nameIntent);
+    }
+
+    public void goToSP (View view)
+    {
+        Intent nameIntent = new Intent(this, Menu1SP.class);
+        startActivity(nameIntent);
+    }
+}

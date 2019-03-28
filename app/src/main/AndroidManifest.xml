@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,61 +20,61 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Menu"
+            android:name=".View.Menu"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Menu_java.Menu1Item"
+            android:name=".View.Menu_java.Menu1Item"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu1Conso"
+        <activity android:name=".View.Menu_java.Menu1Conso"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu1Arte"
+        <activity android:name=".View.Menu_java.Menu1Arte"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Artedetail"
+        <activity android:name=".View.Menu_java.Artedetail"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu1Syn"
+        <activity android:name=".View.Menu_java.Menu1Syn"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Syndetail"
+        <activity android:name=".View.Menu_java.Syndetail"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu1Equi"
+        <activity android:name=".View.Menu_java.Menu1Equi"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu2Arme"
+        <activity android:name=".View.Menu_java.Menu2Arme"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Equipementdetail"
+        <activity android:name=".View.Menu_java.Equipementdetail"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu2Second"
+        <activity android:name=".View.Menu_java.Menu2Second"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu2Head"
+        <activity android:name=".View.Menu_java.Menu2Head"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu2Body"
+        <activity android:name=".View.Menu_java.Menu2Body"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu2Acce"
+        <activity android:name=".View.Menu_java.Menu2Acce"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu3Skill"
+        <activity android:name=".View.Menu_java.Menu3Skill"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Skilldetail"
+        <activity android:name=".View.Menu_java.Skilldetail"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu4Recette"
+        <activity android:name=".View.Menu_java.Menu4Recette"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Recette_Layout"
+        <activity android:name=".View.Menu_java.Recette_Layout"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu5Perso"
+        <activity android:name=".View.Menu_java.Menu5Perso"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Personnage"
+        <activity android:name=".View.Menu_java.Personnage"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu1SP"
+        <activity android:name=".View.Menu_java.Menu1SP"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu6World"
+        <activity android:name=".View.Menu_java.Menu6World"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu6Loca"
+        <activity android:name=".View.Menu_java.Menu6Loca"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu6Syno"
+        <activity android:name=".View.Menu_java.Menu6Syno"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Opening"
+        <activity android:name=".View.Menu_java.Opening"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".SplashScreen"
+            android:name=".View.SplashScreen"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Menu_java.Menu7Recherche"
+        <activity android:name=".View.Menu_java.Menu7Recherche"
             android:screenOrientation="portrait"/>
 
     </application>

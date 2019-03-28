@@ -2,47 +2,28 @@ package com.example.tales.Controller;
 
 import android.util.Log;
 
-import com.example.tales.Interface_API.TOV_API;
-import com.example.tales.Menu_java.Menu1Arte;
-import com.example.tales.Menu_java.Menu1Conso;
-import com.example.tales.Menu_java.Menu1SP;
-import com.example.tales.Menu_java.Menu1Syn;
-import com.example.tales.Menu_java.Menu2Acce;
-import com.example.tales.Menu_java.Menu2Arme;
-import com.example.tales.Menu_java.Menu2Body;
-import com.example.tales.Menu_java.Menu2Head;
-import com.example.tales.Menu_java.Menu2Second;
-import com.example.tales.Menu_java.Menu3Skill;
-import com.example.tales.Menu_java.Menu4Recette;
-import com.example.tales.Menu_java.Menu5Perso;
-import com.example.tales.Menu_java.Menu6Loca;
-import com.example.tales.Menu_java.Menu6Syno;
-import com.example.tales.Menu_java.Menu7Recherche;
-import com.example.tales.Objet.Arte_Menu;
-import com.example.tales.Objet.Character;
-import com.example.tales.Objet.Equipement_item;
-import com.example.tales.Objet.Item_Menu;
-import com.example.tales.Objet.Loca;
-import com.example.tales.Objet.Recette;
-import com.example.tales.Objet.SP_Menu;
-import com.example.tales.Objet.Skill_item;
-import com.example.tales.Objet.Synopsis;
-import com.example.tales.Objet.Synthese;
-import com.example.tales.Response.ArteResponse;
-import com.example.tales.Response.ChaResponse;
-import com.example.tales.Response.Equi2Response;
-import com.example.tales.Response.EquiResponse;
-import com.example.tales.Response.ItemResponse;
-import com.example.tales.Response.LocResponse;
-import com.example.tales.Response.RecResponse;
-import com.example.tales.Response.SPResponse;
-import com.example.tales.Response.SkillResponse;
-import com.example.tales.Response.SynResponse;
-import com.example.tales.Response.SynoResponse;
+import com.example.tales.Controller.Interface_API.TOV_API;
+import com.example.tales.View.Menu_java.Menu7Recherche;
+import com.example.tales.Model.Objet.Arte_Menu;
+import com.example.tales.Model.Objet.Character;
+import com.example.tales.Model.Objet.Equipement_item;
+import com.example.tales.Model.Objet.Item_Menu;
+import com.example.tales.Model.Objet.Loca;
+import com.example.tales.Model.Objet.Recette;
+import com.example.tales.Model.Objet.Skill_item;
+import com.example.tales.Model.Objet.Synthese;
+import com.example.tales.Model.Objet.Response.ArteResponse;
+import com.example.tales.Model.Objet.Response.ChaResponse;
+import com.example.tales.Model.Objet.Response.Equi2Response;
+import com.example.tales.Model.Objet.Response.EquiResponse;
+import com.example.tales.Model.Objet.Response.ItemResponse;
+import com.example.tales.Model.Objet.Response.LocResponse;
+import com.example.tales.Model.Objet.Response.RecResponse;
+import com.example.tales.Model.Objet.Response.SkillResponse;
+import com.example.tales.Model.Objet.Response.SynResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -212,7 +193,7 @@ public class RechercheController {
                         //if (actual.getName_equ().toLowerCase().contains(users))
                         //{
                             resultat.add(actual);
-                            Log.wtf("aaaaaaaaa", actual.getName_equ());
+
 
                         //}
                     }
@@ -336,7 +317,7 @@ public class RechercheController {
             public void onResponse(Call<SkillResponse> call, Response<SkillResponse> response) {
                 SkillResponse skillResponse = response.body();
                 ArrayList<Skill_item> skilllist = skillResponse.getSkill_element();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Skill_item actual: skilllist ) {
                    // if (actual.getName().toLowerCase().contains(users))
                    // {
@@ -361,7 +342,7 @@ public class RechercheController {
             public void onResponse(Call<RecResponse> call, Response<RecResponse> response) {
                 RecResponse recResponse = response.body();
                 ArrayList<Recette> recettelist = recResponse.getRecette_element();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Recette actual: recettelist ) {
                   //  if (actual.getName().toLowerCase().contains(users))
                    // {
@@ -386,7 +367,7 @@ public class RechercheController {
             public void onResponse(Call<ChaResponse> call, Response<ChaResponse> response) {
                 ChaResponse chaResponse = response.body();
                 ArrayList<Character> characterslist = chaResponse.getCharacter_element();
-                //TODO a comparer avec la recherche de l'utilisateur
+
 
                 for (Character actual: characterslist ) {
 
@@ -416,8 +397,7 @@ public class RechercheController {
             public void onResponse(Call<LocResponse> call, Response<LocResponse> response) {
                 LocResponse locResponse = response.body();
                 ArrayList<Loca> localist = locResponse.getLocation_element();
-                //TODO a comparer avec la recherche de l'utilisateur
-                Log.wtf("aaaaaaaaa", "On passe aussi ici");
+
                 for (Loca actual: localist ) {
                     //if (actual.getLieu().toLowerCase().contains(users))
                     //{
@@ -426,7 +406,7 @@ public class RechercheController {
                    // }
                 }
                 Log.wtf("aaaaaaaaa", " taille:"+resultat.size());
-                Log.wtf("aaaaaaaaa", "FINIIIIIIIII");
+
                 recherche.showfind(resultat);
 
                 //resultat.clear();
