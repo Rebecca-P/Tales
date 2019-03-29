@@ -120,9 +120,12 @@ Une fois qu'elle sera prête , vous pourrez y effectuer une recherche dynamique 
 </p>
 
 Et si par hasard vous avez oublié de verifier une information concernant le précédent item, vous pourrez cliquer sur **derniere recherche**
-pour retrouver votre derniere recherche!
+pour retrouver votre derniere recherche grace à la **mise en cache du dernier item**!
 
 <p align="center">
 <img width ="250" height="440" src="https://github.com/Rebecca-P/Tales_ofData/blob/master/Screenshot_2019-03-28-21-19-16.png">
+</p>
+<p align="center">
+<img width ="250" height="440" src="https://github.com/Rebecca-P/Tales_ofData/blob/master/screen.png">
 </p>
 
