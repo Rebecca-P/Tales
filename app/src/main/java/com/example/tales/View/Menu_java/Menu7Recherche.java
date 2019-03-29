@@ -71,6 +71,12 @@ public class Menu7Recherche extends AppCompatActivity {
         controller.recupDonne();
         recuperons();
 
+        users.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                users.getText().clear(); //or you can use editText.setText("");
+            }
+        });
         rv_menu.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rv_menu, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
@@ -199,12 +205,7 @@ public class Menu7Recherche extends AppCompatActivity {
 
             }
         }));
-        users.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                users.getText().clear(); //or you can use editText.setText("");
-            }
-        });
+
 
     }
 
@@ -227,6 +228,7 @@ public class Menu7Recherche extends AppCompatActivity {
             en_cours.setVisibility(View.GONE);
             pas_trouve.setVisibility(View.VISIBLE);
         }else{
+            mise_en_cache(aTrouver);
             changement();
             chargementDonne();
         }
