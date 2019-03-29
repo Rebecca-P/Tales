@@ -75,7 +75,7 @@ Mais si nous allons dans *EQUIPEMENT>ARMES* , on est peut voir que nous avons le
 <p align="center">
 <img width ="250" height="440" src="https://github.com/Rebecca-P/Tales_ofData/blob/master/Screenshot_2019-03-28-21-20-04.png">
 </p>
-En cliquant sur un nom, on peut avoir le **detail de l'item**!
+En cliquant sur un nom, on peut avoir le **detail de l'item** !
 
 
 <p align="center">
