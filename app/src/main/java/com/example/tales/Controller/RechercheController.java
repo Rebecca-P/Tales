@@ -95,7 +95,7 @@ public class RechercheController {
             public void onResponse(Call<ItemResponse> call, Response<ItemResponse> response) {
                 ItemResponse itemResponse = response.body();
                 ArrayList<Item_Menu> itemlist = itemResponse.getItem_element();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Item_Menu actual: itemlist ) {
                         //if (actual.getName_item().toLowerCase().contains(users))
                         //{
@@ -121,7 +121,7 @@ public class RechercheController {
             public void onResponse(Call<ArteResponse> call, Response<ArteResponse> response) {
                 ArteResponse arteResponse = response.body();
                 ArrayList<Arte_Menu> artelist = arteResponse.getArte_element();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Arte_Menu actual: artelist ) {
                     //if (actual.getName_item().toLowerCase().contains(users))
                     //{
@@ -147,7 +147,7 @@ public class RechercheController {
             public void onResponse(Call<SynResponse> call, Response<SynResponse> response) {
                 SynResponse synResponse = response.body();
                 ArrayList<Synthese> synlist = synResponse.getSynthese_element();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Synthese actual: synlist ) {
                    // if (actual.getName().toLowerCase().contains(users))
                    // {
@@ -187,7 +187,7 @@ public class RechercheController {
                 all_equi.add(armResponse.getDagger());
                 all_equi.add(armResponse.getKnife());
 
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (ArrayList<Equipement_item> liste: all_equi ) {
                     for (Equipement_item actual:liste ) {
                         //if (actual.getName_equ().toLowerCase().contains(users))
@@ -217,7 +217,7 @@ public class RechercheController {
             public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
                 Equi2Response secondResponse = response.body();
                 ArrayList<Equipement_item> secondlist = secondResponse.getSecond();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Equipement_item actual: secondlist ) {
                    // if (actual.getName_equ().toLowerCase().contains(users))
                     //{
@@ -242,7 +242,7 @@ public class RechercheController {
             public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
                 Equi2Response headResponse = response.body();
                 ArrayList<Equipement_item> headlist = headResponse.getHead();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Equipement_item actual: headlist ) {
                    // if (actual.getName_equ().toLowerCase().contains(users))
                    // {
@@ -267,7 +267,7 @@ public class RechercheController {
             public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
                 Equi2Response bodyResponse = response.body();
                 ArrayList<Equipement_item> bodylist = bodyResponse.getBody();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Equipement_item actual: bodylist ) {
                   //  if (actual.getName_equ().toLowerCase().contains(users))
                   //  {
@@ -292,7 +292,7 @@ public class RechercheController {
             public void onResponse(Call<Equi2Response> call, Response<Equi2Response> response) {
                 Equi2Response acceResponse = response.body();
                 ArrayList<Equipement_item> accelist = acceResponse.getAcce();
-                //TODO a comparer avec la recherche de l'utilisateur
+
                 for (Equipement_item actual: accelist ) {
                     //if (actual.getName_equ().toLowerCase().contains(users))
                     //{

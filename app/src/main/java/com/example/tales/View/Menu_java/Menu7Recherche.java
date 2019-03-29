@@ -1,5 +1,6 @@
 package com.example.tales.View.Menu_java;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -211,14 +212,24 @@ public class Menu7Recherche extends AppCompatActivity {
 
     public void mise_en_cache(String nom)
     {
-        SharedPreferences.Editor save_data= PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
-        save_data.putString("last_save", nom);
-        save_data.apply();
+        //SharedPreferences.Editor save_data= PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+        /*save_data.putString("last_save", nom);
+        save_data.apply();*/
+
+        SharedPreferences save_data = this.getSharedPreferences("last_save", Context.MODE_PRIVATE);
+        save_data
+                .edit()
+                .putString("last_save", nom)
+                .apply();
     }
 
     public void recup_cache(View view)
     {
-        SharedPreferences recup = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        //SharedPreferences recup = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+       SharedPreferences recup;
+       recup = this.getSharedPreferences("last_save", Context.MODE_PRIVATE);
+
         aTrouver = recup.getString("last_save", "rien");
         String temp=aTrouver.toLowerCase();
         aTrouver=temp;
